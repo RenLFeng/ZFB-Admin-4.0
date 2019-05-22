@@ -227,7 +227,7 @@ export default {
           pkgName: accessDeviceZipName(Number(this.currentVer.posCardSlotNum)), // 包名（只有发布设备版本会有）
           releaseCode: this.currentVer.releaseCode, // 设备灰度发布标识（100-整体发布，200-部分分公司发布，300 部分一级发布，只有发布设备版本会有）
           oneOrganId: this.currentVer.multipleRange, // 灰度发布子公司（只有发布设备版本会有）
-          provinceId: this.currentVer.multipleRange // 灰度发布分公司机构（只有发布设备版本会有）
+          provinceId: this.currentVer.multipleRange // 灰度发布分公司（只有发布设备版本会有）
         }
         this.$axios.post(addNewRelease, body).then(res => {
           this.$emit('addVer')
@@ -254,7 +254,7 @@ export default {
           pkgName: accessDeviceZipName(Number(this.currentVer.posCardSlotNum)), // 包名（只有发布设备版本会有）
           releaseCode: this.currentVer.releaseCode, // 设备灰度发布标识（100-整体发布，200-部分分公司发布，300 部分一级发布，只有发布设备版本会有）
           oneOrganId: this.currentVer.multipleRange, // 灰度发布子公司（只有发布设备版本会有）
-          provinceId: this.currentVer.multipleRange, // 灰度发布分公司机构（只有发布设备版本会有）
+          provinceId: this.currentVer.multipleRange, // 灰度发布分公司（只有发布设备版本会有）
           sysTeamId: this.currentVer.sysTeamId
         }
         this.$axios.post(editorRelease, body).then(res => {

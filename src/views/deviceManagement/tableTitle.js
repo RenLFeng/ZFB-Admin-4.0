@@ -35,7 +35,7 @@ export const TableTitle = [
     width: 130
   },
   {
-    title: '分公司机构',
+    title: '分公司',
     prop: 'provinceProxyName',
     level: [PLATFORM],
     width: 150

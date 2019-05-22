@@ -27,7 +27,7 @@ export const TableHead = [
     level: [PLATFORM, PROVINCIAL]
   },
   {
-    label: '分公司机构',
+    label: '分公司',
     prop: 'proOrganInfo',
     level: [PLATFORM]
   },
@@ -143,7 +143,7 @@ export const searchCondition = [
   },
   {
     type: 'input',
-    label: '分公司机构',
+    label: '分公司',
     placeholder: '请输入名称或编号',
     searchValue: 'proOrganName',
     level: [PLATFORM]

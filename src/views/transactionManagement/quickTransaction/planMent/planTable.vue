@@ -39,7 +39,7 @@
           <el-input
             clearable
             v-model="searchData.proOrganName"
-            placeholder="分公司机构名称"
+            placeholder="分公司名称"
             style="width:180px"
           ></el-input>
         </el-form-item>

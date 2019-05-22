@@ -17,7 +17,7 @@ export const onlineUserTableHead = [
     level: [PLATFORM, PROVINCIAL, ORGAN, SECONDORGAN]
   },
   {
-    label: '分公司机构',
+    label: '分公司',
     prop: 'proOrganName',
     level: [PLATFORM]
   },
@@ -108,8 +108,8 @@ export const searchCondition = [
   },
   {
     type: 'input',
-    label: '分公司机构',
-    placeholder: '分公司机构名称或编号',
+    label: '分公司',
+    placeholder: '分公司名称或编号',
     searchValue: 'proOrganName',
     level: [PLATFORM]
   },

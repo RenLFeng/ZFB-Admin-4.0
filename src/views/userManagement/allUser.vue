@@ -16,8 +16,8 @@
       <el-form-item label="推荐人手机号">
         <el-input v-model="searchData.inviteAccount" clearable placeholder="推荐人手机号"></el-input>
       </el-form-item>
-      <el-form-item v-if="level ===levelMap.PLATFORM" label="分公司机构">
-        <el-input v-model="searchData.proOrganName" clearable placeholder="分公司机构名称或编号"></el-input>
+      <el-form-item v-if="level ===levelMap.PLATFORM" label="分公司">
+        <el-input v-model="searchData.proOrganName" clearable placeholder="分公司名称或编号"></el-input>
       </el-form-item>
       <el-form-item v-if="level <=levelMap.PROVINCIAL" label="子公司">
         <el-input v-model="searchData.organName" clearable placeholder="子公司名称或编号"></el-input>

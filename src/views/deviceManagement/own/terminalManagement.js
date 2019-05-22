@@ -12,7 +12,7 @@ export const terminalColumn = () => {
     },
     {
       tableProp: 'proOrgan',
-      tableLabel: '分公司机构'
+      tableLabel: '分公司'
     },
     {
       tableProp: 'oneOrgan',

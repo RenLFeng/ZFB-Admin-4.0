@@ -28,7 +28,7 @@ export const allUserTableTitle = [
     level: [levelMap.PLATFORM, levelMap.PROVINCIAL]
   },
   {
-    title: '分公司机构',
+    title: '分公司',
     prop: 'proOrganName',
     level: [levelMap.PLATFORM]
   },
@@ -66,7 +66,7 @@ export const teamTableListTitle = [
     level: [levelMap.PLATFORM, levelMap.PROVINCIAL, levelMap.ORGAN, levelMap.SECONDORGAN]
   },
   {
-    title: '分公司机构',
+    title: '分公司',
     prop: 'proOrganName',
     level: [levelMap.PLATFORM]
   },
@@ -109,7 +109,7 @@ export const MerchantTableListTitle = [
     level: [levelMap.PLATFORM, levelMap.PROVINCIAL, levelMap.ORGAN, levelMap.SECONDORGAN]
   },
   {
-    title: '分公司机构',
+    title: '分公司',
     prop: 'proOrganName',
     level: [levelMap.PLATFORM]
   },

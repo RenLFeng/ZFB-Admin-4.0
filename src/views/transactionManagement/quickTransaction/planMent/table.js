@@ -35,7 +35,7 @@ const TableTitle = [
     width: 110
   },
   {
-    title: '分公司机构',
+    title: '分公司',
     prop: 'proOrgan',
     level: [PLATFORM]
   },

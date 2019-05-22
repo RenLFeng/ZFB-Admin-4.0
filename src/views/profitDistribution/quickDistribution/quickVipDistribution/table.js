@@ -27,7 +27,7 @@ export const TableTitle = [
     level: [PLATFORM, PROVINCIAL]
   },
   {
-    title: '分公司机构',
+    title: '分公司',
     prop: 'provinceName',
     level: [PLATFORM]
   },

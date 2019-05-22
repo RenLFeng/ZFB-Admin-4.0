@@ -253,7 +253,7 @@
           </el-col>
           <el-col :span="3" v-if="accountinfo.isOpen === 1">
             <el-tag>开通合伙人奖励分配规则</el-tag>
-            <el-form-item label="分公司机构" v-if="accountinfo.organLevel <= 2">
+            <el-form-item label="分公司" v-if="accountinfo.organLevel <= 2">
               <span>{{accountinfo.provinceAmt}}元</span>
             </el-form-item>
             <el-form-item label="子公司" v-if="accountinfo.organLevel <= 3">
@@ -543,7 +543,7 @@ export default {
     organType(type) {
       const organTypeMap = {
         1: '平台',
-        2: '分公司机构',
+        2: '分公司',
         3: '子公司'
       }
       return organTypeMap[type]

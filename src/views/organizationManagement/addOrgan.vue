@@ -147,7 +147,7 @@
             <el-tag>开通合伙人奖励分配规则</el-tag>
             <el-form-item label="奖励总金额">{{organRuleData.totalReward}}元</el-form-item>
           </p>
-          <el-form-item label="分公司机构" prop="provinceAmt" v-if="addOrganData.organType <= 2">
+          <el-form-item label="分公司" prop="provinceAmt" v-if="addOrganData.organType <= 2">
             <el-input v-model="addOrganData.provinceAmt" :disabled="canEdit"></el-input>
           </el-form-item>
           <br>
@@ -233,7 +233,7 @@ export default {
         idCard: [{ required: true, message: '请输入身份证号码', trigger: 'blur' }],
         phone: [{ required: true, message: '请输入联系方式', trigger: 'blur' }],
         detailAddr: [{ required: true, message: '请输入详细地址', trigger: 'blur' }],
-        provinceAmt: [{ required: true, message: '请输入分公司机构开通合伙人奖励', trigger: 'blur' }],
+        provinceAmt: [{ required: true, message: '请输入分公司开通合伙人奖励', trigger: 'blur' }],
         organAmt: [{ required: true, message: '请输入子公司开通合伙人奖励', trigger: 'blur' }],
         countyAmt: [{ required: true, message: '请输入高级合伙人开通合伙人奖励', trigger: 'blur' }],
         posPayFee: [{ required: true, message: '请选择设备还款费率', trigger: 'change' }],

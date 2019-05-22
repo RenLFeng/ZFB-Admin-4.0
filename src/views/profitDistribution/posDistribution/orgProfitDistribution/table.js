@@ -93,7 +93,7 @@ const statusMap = {
 
 const organtypeMap = {
   1: '平台',
-  2: '分公司机构',
+  2: '分公司',
   3: '子公司',
   9: '高级合伙人'
 }

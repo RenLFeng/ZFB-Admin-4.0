@@ -27,7 +27,7 @@
               clearable
               placeholder="机构类型"
             >
-              <el-option v-if="level === levelMap.PLATFORM" label="分公司机构" value="2"></el-option>
+              <el-option v-if="level === levelMap.PLATFORM" label="分公司" value="2"></el-option>
               <el-option label="子公司" value="3"></el-option>
               <el-option label="高级合伙人" value="9"></el-option>
             </el-select>

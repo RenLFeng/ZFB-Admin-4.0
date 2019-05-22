@@ -30,7 +30,7 @@
           <el-input clearable v-model="referrerPhone" placeholder="推荐人手机号码"></el-input>
         </el-form-item>
         <el-form-item v-if="level ===levelMap.PLATFORM">
-          <el-input clearable v-model="province" placeholder="分公司机构"></el-input>
+          <el-input clearable v-model="province" placeholder="分公司"></el-input>
         </el-form-item>
         <el-form-item v-if="level <=levelMap.PROVINCIAL">
           <el-input clearable v-model="oneOrgan" placeholder="子公司"></el-input>
