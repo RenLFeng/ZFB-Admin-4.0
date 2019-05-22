@@ -75,13 +75,13 @@ export function createRouter() {
             path: '/organizations',
             component: () => import('../views/organizationManagement/index.vue')
           },
-          {
-            meta: {
-              title: '激活码'
-            },
-            path: '/activeCode',
-            component: () => import('../views/organizationManagement/activeCode/index.vue')
-          },
+          // {
+          //   meta: {
+          //     title: '激活码'
+          //   },
+          //   path: '/activeCode',
+          //   component: () => import('../views/organizationManagement/activeCode/index.vue')
+          // },
           // {
           //   meta: {
           //     title: '设备认证'
@@ -160,7 +160,9 @@ export function createRouter() {
             },
             path: '/provinceProfitDistribution',
             component: () =>
-              import('../views/profitDistribution/posDistribution/provinceProfitDistribution/index.vue')
+              import(
+                '../views/profitDistribution/posDistribution/provinceProfitDistribution/index.vue'
+              )
           },
           {
             meta: {
@@ -184,7 +186,9 @@ export function createRouter() {
             },
             path: '/quickProvinceDistribution',
             component: () =>
-              import('../views/profitDistribution/quickDistribution/quickProvinceDistribution/index.vue')
+              import(
+                '../views/profitDistribution/quickDistribution/quickProvinceDistribution/index.vue'
+              )
           },
           {
             meta: {
@@ -200,7 +204,9 @@ export function createRouter() {
             },
             path: '/quickPartnerDistribution',
             component: () =>
-              import('../views/profitDistribution/quickDistribution/quickPartnerDistribution/index.vue')
+              import(
+                '../views/profitDistribution/quickDistribution/quickPartnerDistribution/index.vue'
+              )
           },
           {
             meta: {

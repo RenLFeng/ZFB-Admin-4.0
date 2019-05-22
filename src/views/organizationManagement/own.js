@@ -47,35 +47,38 @@ export const TableTitle = [
     level: [levelMap.PLATFORM, levelMap.PROVINCIAL]
   },
   {
-    title: '库存数量(台)',
+    title: '剩余库存(台)',
     prop: 'inventoryNum',
-    level: [levelMap.PLATFORM, levelMap.PROVINCIAL, levelMap.ORGAN, levelMap.SECONDORGAN]
+    level: [levelMap.PLATFORM, levelMap.PROVINCIAL, levelMap.ORGAN, levelMap.SECONDORGAN],
+    width: 135
   },
   {
     title: '下发数量(台)',
     prop: 'issuedNum',
-    level: [levelMap.PLATFORM, levelMap.PROVINCIAL, levelMap.ORGAN, levelMap.SECONDORGAN]
+    level: [levelMap.PLATFORM, levelMap.PROVINCIAL, levelMap.ORGAN, levelMap.SECONDORGAN],
+    width: 135
   },
   {
     title: '设备激活数(台)',
     prop: 'activateNum',
-    level: [levelMap.PLATFORM, levelMap.PROVINCIAL, levelMap.ORGAN, levelMap.SECONDORGAN]
+    level: [levelMap.PLATFORM, levelMap.PROVINCIAL, levelMap.ORGAN, levelMap.SECONDORGAN],
+    width: 135
   },
-  {
-    title: '激活码库存(个)',
-    prop: 'codeInventoryNum',
-    level: [levelMap.PLATFORM, levelMap.PROVINCIAL, levelMap.ORGAN, levelMap.SECONDORGAN]
-  },
-  {
-    title: '激活码激活数(个)',
-    prop: 'codeActivateNum',
-    level: [levelMap.PLATFORM, levelMap.PROVINCIAL, levelMap.ORGAN, levelMap.SECONDORGAN]
-  },
-  {
-    title: '快捷交易',
-    prop: 'quickStatusText',
-    level: [levelMap.PLATFORM, levelMap.PROVINCIAL, levelMap.ORGAN, levelMap.SECONDORGAN]
-  },
+  // {
+  //   title: '激活码库存(个)',
+  //   prop: 'codeInventoryNum',
+  //   level: [levelMap.PLATFORM, levelMap.PROVINCIAL, levelMap.ORGAN, levelMap.SECONDORGAN]
+  // },
+  // {
+  //   title: '激活码激活数(个)',
+  //   prop: 'codeActivateNum',
+  //   level: [levelMap.PLATFORM, levelMap.PROVINCIAL, levelMap.ORGAN, levelMap.SECONDORGAN]
+  // },
+  // {
+  //   title: '快捷交易',
+  //   prop: 'quickStatusText',
+  //   level: [levelMap.PLATFORM, levelMap.PROVINCIAL, levelMap.ORGAN, levelMap.SECONDORGAN]
+  // },
   {
     title: '状态',
     prop: 'status',
