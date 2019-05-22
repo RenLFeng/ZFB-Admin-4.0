@@ -8,7 +8,7 @@ export const exportRecordStatus = {
 }
 export const organLevel = {
   1: '总公司',
-  2: '省级代理',
+  2: '分公司代理',
   3: '一级代理',
   4: '机构直推合伙人',
   5: '合伙人',
@@ -29,11 +29,11 @@ export const payStatus = {
 export const getOrganLevel = [
   {
     id: 2,
-    text: '省级机构'
+    text: '分公司机构'
   },
   {
     id: 3,
-    text: '一级机构'
+    text: '子公司'
   }
 ]
 export const getAuditStatus = [

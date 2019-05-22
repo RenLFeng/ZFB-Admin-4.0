@@ -23,19 +23,19 @@ const TableTitle = [
     level: [PLATFORM, PROVINCIAL, ORGAN, SECONDORGAN]
   },
   {
-    title: '二级机构',
+    title: '高级合伙人',
     prop: 'twoOrgan',
     level: [PLATFORM, PROVINCIAL, ORGAN],
     width: 110
   },
   {
-    title: '一级机构',
+    title: '子公司',
     prop: 'oneOrgan',
     level: [PLATFORM, PROVINCIAL],
     width: 110
   },
   {
-    title: '省级机构',
+    title: '分公司机构',
     prop: 'proOrgan',
     level: [PLATFORM]
   },

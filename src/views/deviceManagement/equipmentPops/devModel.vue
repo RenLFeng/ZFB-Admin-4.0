@@ -44,11 +44,11 @@
             <el-input type='Number' min='0' v-model="ModelData.activateReward" style="width:480px"></el-input>
         </el-form-item>
         <el-form-item>元</el-form-item>
-        <el-form-item label="省级奖励" prop='activateProvinceReward'>
+        <el-form-item label="分公司奖励" prop='activateProvinceReward'>
             <el-input type='Number' min='0' v-model="ModelData.activateProvinceReward"></el-input>
         </el-form-item>
         <el-form-item>元</el-form-item>
-        <el-form-item label="一级机构" prop='activateOrganReward'>
+        <el-form-item label="子公司" prop='activateOrganReward'>
             <el-input type='Number' min='0' v-model="ModelData.activateOrganReward"></el-input>
         </el-form-item>
         <el-form-item>元</el-form-item>
@@ -67,7 +67,7 @@
             <el-input type='Number' min='0' v-model="ModelData.portReward" style="width:480px"></el-input>
         </el-form-item>
         <el-form-item>元</el-form-item>
-        <el-form-item label="省级奖励" prop='portProvinceReward'>
+        <el-form-item label="分公司奖励" prop='portProvinceReward'>
             <el-input type='Number' min='0' v-model="ModelData.portProvinceReward"></el-input>
         </el-form-item>
         <el-form-item>元</el-form-item>
@@ -150,10 +150,10 @@ export default {
           { required: true, message: '请输入机构奖励', trigger: 'blur' }
         ],
         activateProvinceReward: [
-          { required: true, message: '请输入省级奖励', trigger: 'blur' }
+          { required: true, message: '请输入分公司奖励', trigger: 'blur' }
         ],
         activateOrganReward: [
-          { required: true, message: '请输入一级机构', trigger: 'blur' }
+          { required: true, message: '请输入子公司', trigger: 'blur' }
         ],
         totalPort: [
           { required: true, message: '请输入端口总数', trigger: 'blur' }
@@ -168,7 +168,7 @@ export default {
           { required: true, message: '请输入激活单价', trigger: 'blur' }
         ],
         portProvinceReward: [
-          { required: true, message: '请输入省级奖励', trigger: 'blur' }
+          { required: true, message: '请输入分公司奖励', trigger: 'blur' }
         ],
         portOrganReward: [
           { required: true, message: '请输入机构奖励', trigger: 'blur' }

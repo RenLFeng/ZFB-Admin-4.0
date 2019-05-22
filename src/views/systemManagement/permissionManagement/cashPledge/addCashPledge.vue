@@ -80,7 +80,7 @@
 <script>
 import { post, postJOSN } from '../../../../store/requestFacade.js'
 const feeMap = {
-  2: '省级还款分润',
+  2: '分公司还款分润',
   3: '一级还款分润',
   5: '合伙人还款分润',
   9: '二级还款分润'
@@ -128,7 +128,7 @@ export default {
           { label: '累计还款阶段', totalTradeAmt: null, returnAmt: null, errText: '' }
         ],
         depositDeductPO: [
-          { label: '省级还款分润', organLevel: 2, deductPercent: null },
+          { label: '分公司还款分润', organLevel: 2, deductPercent: null },
           { label: '一级还款分润', organLevel: 3, deductPercent: null },
           { label: '二级还款分润', organLevel: 9, deductPercent: null },
           { label: '合伙人还款分润', organLevel: 5, deductPercent: null }

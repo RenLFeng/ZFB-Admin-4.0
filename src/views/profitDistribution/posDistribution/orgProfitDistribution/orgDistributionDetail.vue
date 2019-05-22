@@ -11,7 +11,7 @@
         <el-tab-pane label="合伙人" name="first">
           <team-list :dealType="dealType" :organDetailData="organDetailData"></team-list>
         </el-tab-pane>
-        <el-tab-pane label="二级机构" name="second">
+        <el-tab-pane label="高级合伙人" name="second">
           <secorgan-list :dealType="dealType" :organDetailData="organDetailData"></secorgan-list>
         </el-tab-pane>
       </el-tabs>

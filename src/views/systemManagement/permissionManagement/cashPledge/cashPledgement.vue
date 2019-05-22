@@ -98,7 +98,7 @@ import { TableTitle, ParseRoleList } from './table.js'
 import openActivity from './openActivity'
 
 const feeMap = {
-  2: '省级还款分润',
+  2: '分公司还款分润',
   3: '一级还款分润',
   5: '合伙人还款分润',
   9: '二级还款分润'

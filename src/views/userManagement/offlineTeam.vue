@@ -11,14 +11,14 @@
         <el-form-item label="合伙人手机号">
           <el-input v-model="searchData.phone" clearable placeholder="合伙人手机号码"></el-input>
         </el-form-item>
-        <el-form-item v-if="level === levelMap.PLATFORM" label="省级机构">
-          <el-input v-model="searchData.proOrganName" clearable placeholder="省级机构名称或编号"></el-input>
+        <el-form-item v-if="level === levelMap.PLATFORM" label="分公司机构">
+          <el-input v-model="searchData.proOrganName" clearable placeholder="分公司机构名称或编号"></el-input>
         </el-form-item>
-        <el-form-item v-if="level <=levelMap.PROVINCIAL" label="一级机构">
-          <el-input v-model="searchData.organName" clearable placeholder="一级机构名称或编号"></el-input>
+        <el-form-item v-if="level <=levelMap.PROVINCIAL" label="子公司">
+          <el-input v-model="searchData.organName" clearable placeholder="子公司名称或编号"></el-input>
         </el-form-item>
-        <el-form-item v-if="level <=levelMap.ORGAN" label="二级机构">
-          <el-input v-model="searchData.secOrganName" clearable placeholder="二级机构名称或编号"></el-input>
+        <el-form-item v-if="level <=levelMap.ORGAN" label="高级合伙人">
+          <el-input v-model="searchData.secOrganName" clearable placeholder="高级合伙人名称或编号"></el-input>
         </el-form-item>
         <el-form-item label="授权时间">
           <el-date-picker

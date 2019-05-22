@@ -27,9 +27,9 @@
               clearable
               placeholder="机构类型"
             >
-              <el-option v-if="level === levelMap.PLATFORM" label="省级机构" value="2"></el-option>
-              <el-option label="一级机构" value="3"></el-option>
-              <el-option label="二级机构" value="9"></el-option>
+              <el-option v-if="level === levelMap.PLATFORM" label="分公司机构" value="2"></el-option>
+              <el-option label="子公司" value="3"></el-option>
+              <el-option label="高级合伙人" value="9"></el-option>
             </el-select>
           </el-form-item>
           <el-form-item v-if="level <= levelMap.PROVINCIAL" label="上级机构">
@@ -234,7 +234,7 @@ export default {
       this.editOrganData.provinceCode = value[0]
       this.editOrganData.cityCode = value[1]
     },
-    // 平台，省级选择的所有列表
+    // 平台，分公司选择的所有列表
     async orgSelect() {
       try {
         const res = await post({

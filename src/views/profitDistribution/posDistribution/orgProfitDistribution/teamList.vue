@@ -78,7 +78,7 @@ export default {
         type: this.dealType,
         organId: this.organDetailData.organId,
         date: this.addDate,
-        organLevel: 4 // 2=省级，3=一级机构，4=直属合伙人，9=二级机构
+        organLevel: 4 // 2=分公司，3=子公司，4=直属合伙人，9=高级合伙人
       }
     },
     handleRows(rows) {

@@ -90,11 +90,11 @@
         <span style="line-height:40px">元</span>
         <div>
           <h4 style="font-size:16px;font-weight:normal">开通合伙人奖励分配规则</h4>
-          <el-form-item label="省级机构" prop="provRewardAmount">
+          <el-form-item label="分公司机构" prop="provRewardAmount">
             <el-input clearable :disabled="btnExist" v-model="addActivityData.provRewardAmount"></el-input>
           </el-form-item>
           <span style="line-height:40px">元</span>
-          <el-form-item label="一级机构" prop="onelevelOrganRewardAmount">
+          <el-form-item label="子公司" prop="onelevelOrganRewardAmount">
             <el-input
               clearable
               :disabled="btnExist"
@@ -102,7 +102,7 @@
             ></el-input>
           </el-form-item>
           <span style="line-height:40px">元</span>
-          <el-form-item label="二级机构" prop="twolevelOrganRewardAmount">
+          <el-form-item label="高级合伙人" prop="twolevelOrganRewardAmount">
             <el-input
               clearable
               :disabled="btnExist"
@@ -195,15 +195,15 @@ export default {
           trigger: 'blur'
         },
         platformProfitAmount: { required: true, message: '请输入平台手续费', trigger: 'blur' },
-        provRewardAmount: { required: true, message: '请输入省级奖励金额', trigger: 'blur' },
+        provRewardAmount: { required: true, message: '请输入分公司奖励金额', trigger: 'blur' },
         onelevelOrganRewardAmount: {
           required: true,
-          message: '请输入一级机构奖励金额',
+          message: '请输入子公司奖励金额',
           trigger: 'blur'
         },
         twolevelOrganRewardAmount: {
           required: true,
-          message: '请输入二级机构奖励金额',
+          message: '请输入高级合伙人奖励金额',
           trigger: 'blur'
         },
         directPartnerRewardAmount: {
@@ -246,9 +246,9 @@ export default {
           orderCashBackAmount: this.addActivityData.orderCashBackAmount, // 直属机构
           platformProfitAmount: this.addActivityData.platformProfitAmount, // 平台手续费
           activityRewardAmount: this.addActivityData.activityRewardAmount, // 激活奖励总金额
-          provRewardAmount: this.addActivityData.provRewardAmount, // 省级机构
-          onelevelOrganRewardAmount: this.addActivityData.onelevelOrganRewardAmount, // 一级机构
-          twolevelOrganRewardAmount: this.addActivityData.twolevelOrganRewardAmount, // 二级机构
+          provRewardAmount: this.addActivityData.provRewardAmount, // 分公司机构
+          onelevelOrganRewardAmount: this.addActivityData.onelevelOrganRewardAmount, // 子公司
+          twolevelOrganRewardAmount: this.addActivityData.twolevelOrganRewardAmount, // 高级合伙人
           directPartnerRewardAmount: this.addActivityData.directPartnerRewardAmount, // 直接机构
           indirectPartnerRewardAmount: this.addActivityData.indirectPartnerRewardAmount, // 间接机构
           enable: 0
@@ -292,9 +292,9 @@ export default {
         orderCashBackAmount: this.addActivityData.orderCashBackAmount, // 直属机构
         platformProfitAmount: this.addActivityData.platformProfitAmount, // 平台手续费
         activityRewardAmount: this.addActivityData.activityRewardAmount, // 激活奖励总金额
-        provRewardAmount: this.addActivityData.provRewardAmount, // 省级机构
-        onelevelOrganRewardAmount: this.addActivityData.onelevelOrganRewardAmount, // 一级机构
-        twolevelOrganRewardAmount: this.addActivityData.twolevelOrganRewardAmount, // 二级机构
+        provRewardAmount: this.addActivityData.provRewardAmount, // 分公司机构
+        onelevelOrganRewardAmount: this.addActivityData.onelevelOrganRewardAmount, // 子公司
+        twolevelOrganRewardAmount: this.addActivityData.twolevelOrganRewardAmount, // 高级合伙人
         directPartnerRewardAmount: this.addActivityData.directPartnerRewardAmount, // 直接机构
         indirectPartnerRewardAmount: this.addActivityData.indirectPartnerRewardAmount, // 间接机构
         activityId: this.addActivityData.activityId

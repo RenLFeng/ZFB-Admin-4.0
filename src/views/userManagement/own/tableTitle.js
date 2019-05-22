@@ -18,17 +18,17 @@ export const allUserTableTitle = [
     level: [levelMap.PLATFORM, levelMap.PROVINCIAL, levelMap.ORGAN, levelMap.SECONDORGAN]
   },
   {
-    title: '二级机构',
+    title: '高级合伙人',
     prop: 'secOrganName',
     level: [levelMap.PLATFORM, levelMap.PROVINCIAL, levelMap.ORGAN]
   },
   {
-    title: '一级机构',
+    title: '子公司',
     prop: 'organName',
     level: [levelMap.PLATFORM, levelMap.PROVINCIAL]
   },
   {
-    title: '省级机构',
+    title: '分公司机构',
     prop: 'proOrganName',
     level: [levelMap.PLATFORM]
   },
@@ -66,17 +66,17 @@ export const teamTableListTitle = [
     level: [levelMap.PLATFORM, levelMap.PROVINCIAL, levelMap.ORGAN, levelMap.SECONDORGAN]
   },
   {
-    title: '省级机构',
+    title: '分公司机构',
     prop: 'proOrganName',
     level: [levelMap.PLATFORM]
   },
   {
-    title: '一级机构',
+    title: '子公司',
     prop: 'organName',
     level: [levelMap.PLATFORM, levelMap.PROVINCIAL]
   },
   {
-    title: '二级机构',
+    title: '高级合伙人',
     prop: 'secOrganName',
     level: [levelMap.PLATFORM, levelMap.PROVINCIAL, levelMap.ORGAN]
   },
@@ -109,17 +109,17 @@ export const MerchantTableListTitle = [
     level: [levelMap.PLATFORM, levelMap.PROVINCIAL, levelMap.ORGAN, levelMap.SECONDORGAN]
   },
   {
-    title: '省级机构',
+    title: '分公司机构',
     prop: 'proOrganName',
     level: [levelMap.PLATFORM]
   },
   {
-    title: '一级机构',
+    title: '子公司',
     prop: 'organName',
     level: [levelMap.PLATFORM, levelMap.PROVINCIAL]
   },
   {
-    title: '二级机构',
+    title: '高级合伙人',
     prop: 'secOrganName',
     level: [levelMap.PLATFORM, levelMap.PROVINCIAL, levelMap.ORGAN]
   },

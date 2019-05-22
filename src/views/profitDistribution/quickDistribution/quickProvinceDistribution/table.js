@@ -7,7 +7,7 @@ const SECONDORGAN = levelMap.SECONDORGAN
 
 export const TableTitle = [
   {
-    title: '省级',
+    title: '分公司',
     prop: 'organText',
     level: [PLATFORM, PROVINCIAL, ORGAN, SECONDORGAN],
     width: 150
@@ -18,12 +18,12 @@ export const TableTitle = [
     level: [PLATFORM, PROVINCIAL, ORGAN, SECONDORGAN]
   },
   {
-    title: '省级总交易量(元)',
+    title: '分公司总交易量(元)',
     prop: 'performance',
     level: [PLATFORM, PROVINCIAL, ORGAN, SECONDORGAN]
   },
   {
-    title: '省级总分润(元)',
+    title: '分公司总分润(元)',
     prop: 'totalProfit',
     level: [PLATFORM, PROVINCIAL, ORGAN, SECONDORGAN]
   },
@@ -48,7 +48,7 @@ export const TableTitle = [
     level: [PLATFORM, PROVINCIAL, ORGAN, SECONDORGAN]
   },
   {
-    title: '省级月结分润(元)',
+    title: '分公司月结分润(元)',
     prop: 'monthProfit',
     level: [PLATFORM, PROVINCIAL, ORGAN, SECONDORGAN]
   },
@@ -96,7 +96,7 @@ export const organTitle = [
     prop: 'profit'
   },
   {
-    title: '省级分润(元)',
+    title: '分公司分润(元)',
     prop: 'upProfit'
   }
 ]
@@ -116,7 +116,7 @@ export const partnerTitle = [
     prop: 'profit'
   },
   {
-    title: '省级分润',
+    title: '分公司分润',
     prop: 'upProfit'
   }
 ]
@@ -136,7 +136,7 @@ export const vipTitle = [
     prop: 'profit'
   },
   {
-    title: '省级分润(元)',
+    title: '分公司分润(元)',
     prop: 'upProfit'
   }
 ]

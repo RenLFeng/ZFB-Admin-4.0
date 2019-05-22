@@ -39,7 +39,7 @@
           <el-input
             clearable
             v-model="searchData.proOrganName"
-            placeholder="省级机构名称"
+            placeholder="分公司机构名称"
             style="width:180px"
           ></el-input>
         </el-form-item>
@@ -47,7 +47,7 @@
           <el-input
             clearable
             v-model="searchData.oneOrganName"
-            placeholder="一级机构名称"
+            placeholder="子公司名称"
             style="width:180px"
           ></el-input>
         </el-form-item>
@@ -55,7 +55,7 @@
           <el-input
             clearable
             v-model="searchData.twoOrganName"
-            placeholder="二级机构名称"
+            placeholder="高级合伙人名称"
             style="width:180px"
           ></el-input>
         </el-form-item>

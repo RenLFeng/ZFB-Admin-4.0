@@ -24,10 +24,10 @@
           <el-form-item label="合伙人手机号">
             <el-input clearable v-model="partnerAccount"></el-input>
           </el-form-item>
-          <el-form-item label="二级机构">
+          <el-form-item label="高级合伙人">
             <el-input clearable placeholder="请输入名称或编号" v-model="twoOrganName"></el-input>
           </el-form-item>
-          <el-form-item label="一级机构">
+          <el-form-item label="子公司">
             <el-input clearable placeholder="请输入名称或编号" v-model="oneOrganName"></el-input>
           </el-form-item>
           <el-form-item label="原设备编号">

@@ -156,7 +156,7 @@ export function createRouter() {
           },
           {
             meta: {
-              title: '设备省级分润'
+              title: '设备分公司分润'
             },
             path: '/provinceProfitDistribution',
             component: () =>
@@ -180,7 +180,7 @@ export function createRouter() {
           },
           {
             meta: {
-              title: '快捷省级分润'
+              title: '快捷分公司分润'
             },
             path: '/quickProvinceDistribution',
             component: () =>

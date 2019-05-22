@@ -3,7 +3,7 @@
     <div class="distributionOverview">
       <span>机构总交易量: {{totalPerformance|normAmount}} 元</span>
       <span>机构总分润: {{totalProfit|normAmount}} 元</span>
-      <span>二级机构总分润: {{totalCountProfit|normAmount}} 元</span>
+      <span>高级合伙人总分润: {{totalCountProfit|normAmount}} 元</span>
       <span>合伙人总分润: {{partnerProfit|normAmount}} 元</span>
       <span>机构月结分润： {{afterProfit|normAmount}} 元</span>
     </div>

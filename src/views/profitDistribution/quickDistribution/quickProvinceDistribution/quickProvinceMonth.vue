@@ -2,9 +2,9 @@
   <div>
     <div class="searchBox">
       <p class="total">
-        <span>省级总交易量：{{totalPerformance|normAmount}}元</span>&nbsp;
-        <span>省级总分润：{{totalProfit|normAmount}}元</span>&nbsp;
-        <span>省级月结分润：{{totalMonthProfit|normAmount}}元</span>&nbsp;
+        <span>分公司总交易量：{{totalPerformance|normAmount}}元</span>&nbsp;
+        <span>分公司总分润：{{totalProfit|normAmount}}元</span>&nbsp;
+        <span>分公司月结分润：{{totalMonthProfit|normAmount}}元</span>&nbsp;
       </p>
       <p class="total">
         <span>机构总分润：{{totalOrganProfit|normAmount}}元</span>&nbsp;
@@ -18,7 +18,7 @@
           <el-input
             clearable
             v-model="organName"
-            placeholder="省级"
+            placeholder="分公司"
             v-if="level === levelMap.PLATFORM"
           ></el-input>
         </el-form-item>

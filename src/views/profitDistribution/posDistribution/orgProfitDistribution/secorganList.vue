@@ -1,7 +1,7 @@
 <template>
   <div>
     <el-table border :data="detailsData">
-      <el-table-column property="userName" label="二级机构" width="200"></el-table-column>
+      <el-table-column property="userName" label="高级合伙人" width="200"></el-table-column>
       <el-table-column property="tradeAmt" label="本月交易额(元)">
         <template slot-scope="scope">{{scope.row.performance|normAmount}}</template>
       </el-table-column>
@@ -78,7 +78,7 @@ export default {
         type: this.dealType,
         organId: this.organDetailData.organId,
         date: this.addDate,
-        organLevel: 9 // 2=省级，3=一级机构，4=直属合伙人，9=二级机构
+        organLevel: 9 // 2=分公司，3=子公司，4=直属合伙人，9=高级合伙人
       }
     },
     handleRows(rows) {

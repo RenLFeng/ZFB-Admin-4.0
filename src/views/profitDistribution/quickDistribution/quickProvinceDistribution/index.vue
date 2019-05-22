@@ -4,7 +4,7 @@
       <el-breadcrumb separator-class="el-icon-arrow-right">
         <el-breadcrumb-item>分润列表</el-breadcrumb-item>
         <el-breadcrumb-item>快捷分润</el-breadcrumb-item>
-        <el-breadcrumb-item>省级分润</el-breadcrumb-item>
+        <el-breadcrumb-item>分公司分润</el-breadcrumb-item>
       </el-breadcrumb>
     </div>
     <el-tabs v-model="currentTabName" @tab-click="changeTab" type="border-card">

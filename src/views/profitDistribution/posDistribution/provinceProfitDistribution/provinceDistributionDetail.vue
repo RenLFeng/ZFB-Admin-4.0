@@ -17,7 +17,7 @@
         >
           <template slot-scope="scope">{{scope.row.depositProfit|normAmount}}</template>
         </el-table-column>
-        <el-table-column property="provinceAmt" label="省级月结分润(元)">
+        <el-table-column property="provinceAmt" label="分公司月结分润(元)">
           <template slot-scope="scope">{{scope.row.profit|normAmount}}</template>
         </el-table-column>
       </el-table>
@@ -84,7 +84,7 @@ export default {
         type: this.dealType,
         organId: this.provinceDetailData.organId,
         date: this.addDate,
-        organLevel: 3 // 2=省级，3=一级机构，4=直属合伙人，9=二级机构
+        organLevel: 3 // 2=分公司，3=子公司，4=直属合伙人，9=高级合伙人
       }
     },
     handleRows(rows) {

@@ -48,7 +48,7 @@ export const TableTitle = [
     level: [PLATFORM, PROVINCIAL, ORGAN, SECONDORGAN]
   },
   {
-    title: '二级机构总分润(元)',
+    title: '高级合伙人总分润(元)',
     prop: 'countyProfit',
     level: [PLATFORM, PROVINCIAL, ORGAN],
     width: 150
@@ -93,9 +93,9 @@ const statusMap = {
 
 const organtypeMap = {
   1: '平台',
-  2: '省级机构',
-  3: '一级机构',
-  9: '二级机构'
+  2: '分公司机构',
+  3: '子公司',
+  9: '高级合伙人'
 }
 
 export const ParseRoleList = arr => {

@@ -21,13 +21,13 @@
             ></el-option>
           </el-select>
         </el-form-item>
-        <el-form-item label="二级机构">
+        <el-form-item label="高级合伙人">
           <el-input clearable placeholder="请输入名称或编号" v-model="twoOrganName"></el-input>
         </el-form-item>
-        <el-form-item label="一级机构">
+        <el-form-item label="子公司">
           <el-input clearable placeholder="请输入名称或编号" v-model="oneOrganName"></el-input>
         </el-form-item>
-        <el-form-item label="省级机构">
+        <el-form-item label="分公司机构">
           <el-input v-model="proOrganName" clearable placeholder="请输入名称或编号"></el-input>
         </el-form-item>
         <el-form-item label="商户姓名">

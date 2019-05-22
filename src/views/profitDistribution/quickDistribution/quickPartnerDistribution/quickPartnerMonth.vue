@@ -13,13 +13,13 @@
           <el-input clearable v-model="partnerPhone" placeholder="手机号码" style="width:200px"></el-input>
         </el-form-item>
         <el-form-item v-if="level ===levelMap.PLATFORM">
-          <el-input clearable v-model="province" placeholder="省级机构" style="width:200px"></el-input>
+          <el-input clearable v-model="province" placeholder="分公司机构" style="width:200px"></el-input>
         </el-form-item>
         <el-form-item v-if="level <=levelMap.PROVINCIAL">
-          <el-input clearable v-model="oneOrgan" placeholder="一级机构" style="width:200px"></el-input>
+          <el-input clearable v-model="oneOrgan" placeholder="子公司" style="width:200px"></el-input>
         </el-form-item>
         <el-form-item v-if="level <=levelMap.ORGAN">
-          <el-input clearable v-model="countyOrgan" placeholder="二级机构" style="width:200px"></el-input>
+          <el-input clearable v-model="countyOrgan" placeholder="高级合伙人" style="width:200px"></el-input>
         </el-form-item>
         <el-form-item>
           <el-select clearable placeholder="结算状态" v-model="settleStatus" style="width:200px">

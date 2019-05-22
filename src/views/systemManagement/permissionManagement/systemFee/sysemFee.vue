@@ -1,9 +1,9 @@
 <template>
   <div style="background:#fff;height:600px">
     <el-tabs v-model="systemFeeActive" type="card">
-      <el-tab-pane label="省级机构费率" :name="organMap.PROVINCIAL"></el-tab-pane>
-      <el-tab-pane label="一级机构费率" :name="organMap.ONEORGAN"></el-tab-pane>
-      <el-tab-pane label="二级机构费率" :name="organMap.SECORGAN"></el-tab-pane>
+      <el-tab-pane label="分公司机构费率" :name="organMap.PROVINCIAL"></el-tab-pane>
+      <el-tab-pane label="子公司费率" :name="organMap.ONEORGAN"></el-tab-pane>
+      <el-tab-pane label="高级合伙人费率" :name="organMap.SECORGAN"></el-tab-pane>
     </el-tabs>
     <div class="slider">
       <p>

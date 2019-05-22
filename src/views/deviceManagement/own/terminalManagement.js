@@ -12,15 +12,15 @@ export const terminalColumn = () => {
     },
     {
       tableProp: 'proOrgan',
-      tableLabel: '省级机构'
+      tableLabel: '分公司机构'
     },
     {
       tableProp: 'oneOrgan',
-      tableLabel: '一级机构'
+      tableLabel: '子公司'
     },
     {
       tableProp: 'secOrgan',
-      tableLabel: '二级机构'
+      tableLabel: '高级合伙人'
     },
     {
       tableProp: 'partner',

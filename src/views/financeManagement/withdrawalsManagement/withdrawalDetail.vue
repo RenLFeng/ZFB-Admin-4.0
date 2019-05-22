@@ -253,13 +253,13 @@
           </el-col>
           <el-col :span="3" v-if="accountinfo.isOpen === 1">
             <el-tag>开通合伙人奖励分配规则</el-tag>
-            <el-form-item label="省级机构" v-if="accountinfo.organLevel <= 2">
+            <el-form-item label="分公司机构" v-if="accountinfo.organLevel <= 2">
               <span>{{accountinfo.provinceAmt}}元</span>
             </el-form-item>
-            <el-form-item label="一级机构" v-if="accountinfo.organLevel <= 3">
+            <el-form-item label="子公司" v-if="accountinfo.organLevel <= 3">
               <span>{{accountinfo.organAmt}}元</span>
             </el-form-item>
-            <el-form-item label="二级机构">
+            <el-form-item label="高级合伙人">
               <span>{{accountinfo.countyAmt}}元</span>
             </el-form-item>
             <el-form-item label="直属合伙人">
@@ -390,7 +390,7 @@ export default {
         case 1:
           return '总公司'
         case 2:
-          return '省级代理'
+          return '分公司代理'
         case 3:
           return '一级代理'
         case 4:
@@ -543,8 +543,8 @@ export default {
     organType(type) {
       const organTypeMap = {
         1: '平台',
-        2: '省级机构',
-        3: '一级机构'
+        2: '分公司机构',
+        3: '子公司'
       }
       return organTypeMap[type]
     }

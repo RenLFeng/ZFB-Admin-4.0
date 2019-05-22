@@ -2,13 +2,13 @@
   <div>
     <p
       v-if="type === 3"
-    >机构总交易量：{{totalPerformance|normAmount}}元，机构总分润：{{totalProfit|normAmount}}元 省级月结分润：{{totalUpProfit|normAmount}}元</p>
+    >机构总交易量：{{totalPerformance|normAmount}}元，机构总分润：{{totalProfit|normAmount}}元 分公司月结分润：{{totalUpProfit|normAmount}}元</p>
     <p
       v-if="type === 5"
-    >合伙人总交易量：{{totalPerformance|normAmount}}元，合伙人总分润：{{totalProfit|normAmount}}元 省级月结分润：{{totalUpProfit|normAmount}}元</p>
+    >合伙人总交易量：{{totalPerformance|normAmount}}元，合伙人总分润：{{totalProfit|normAmount}}元 分公司月结分润：{{totalUpProfit|normAmount}}元</p>
     <p
       v-if="type === 6"
-    >VIP总交易量：{{totalPerformance|normAmount}}元，VIP总分润：{{totalProfit|normAmount}}元 省级月结分润：{{totalUpProfit|normAmount}}元</p>
+    >VIP总交易量：{{totalPerformance|normAmount}}元，VIP总分润：{{totalProfit|normAmount}}元 分公司月结分润：{{totalUpProfit|normAmount}}元</p>
     <el-table border :data="partnertableData" style="width: 100%" size="small">
       <el-table-column v-for="v in tableTitleList" :prop="v.prop" :label="v.title" :key="v.label"></el-table-column>
     </el-table>

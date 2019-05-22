@@ -147,15 +147,15 @@
             <el-tag>开通合伙人奖励分配规则</el-tag>
             <el-form-item label="奖励总金额">{{organRuleData.totalReward}}元</el-form-item>
           </p>
-          <el-form-item label="省级机构" prop="provinceAmt" v-if="addOrganData.organType <= 2">
+          <el-form-item label="分公司机构" prop="provinceAmt" v-if="addOrganData.organType <= 2">
             <el-input v-model="addOrganData.provinceAmt" :disabled="canEdit"></el-input>
           </el-form-item>
           <br>
-          <el-form-item label="一级机构" prop="organAmt" v-if="addOrganData.organType <= 3">
+          <el-form-item label="子公司" prop="organAmt" v-if="addOrganData.organType <= 3">
             <el-input v-model="addOrganData.organAmt" :disabled="canEdit"></el-input>
           </el-form-item>
           <br>
-          <el-form-item label="二级机构" prop="countyAmt" v-if="addOrganData.organType <= 9">
+          <el-form-item label="高级合伙人" prop="countyAmt" v-if="addOrganData.organType <= 9">
             <el-input v-model="addOrganData.countyAmt" :disabled="canEdit"></el-input>
           </el-form-item>
           <br>
@@ -188,7 +188,7 @@ export default {
       levelMap: levelMap,
       dredgeQuick: 0,
       toOrganType: 1,
-      provinceType: '一级机构',
+      provinceType: '子公司',
       getOrganTypeFeeData: [],
       areaData: [],
       props: {
@@ -233,9 +233,9 @@ export default {
         idCard: [{ required: true, message: '请输入身份证号码', trigger: 'blur' }],
         phone: [{ required: true, message: '请输入联系方式', trigger: 'blur' }],
         detailAddr: [{ required: true, message: '请输入详细地址', trigger: 'blur' }],
-        provinceAmt: [{ required: true, message: '请输入省级机构开通合伙人奖励', trigger: 'blur' }],
-        organAmt: [{ required: true, message: '请输入一级机构开通合伙人奖励', trigger: 'blur' }],
-        countyAmt: [{ required: true, message: '请输入二级机构开通合伙人奖励', trigger: 'blur' }],
+        provinceAmt: [{ required: true, message: '请输入分公司机构开通合伙人奖励', trigger: 'blur' }],
+        organAmt: [{ required: true, message: '请输入子公司开通合伙人奖励', trigger: 'blur' }],
+        countyAmt: [{ required: true, message: '请输入高级合伙人开通合伙人奖励', trigger: 'blur' }],
         posPayFee: [{ required: true, message: '请选择设备还款费率', trigger: 'change' }],
         posRepayFee: [{ required: true, message: '请选择设备收款费率', trigger: 'change' }],
         quickPayFee: [{ required: true, message: '请选择快捷还款费率', trigger: 'change' }],

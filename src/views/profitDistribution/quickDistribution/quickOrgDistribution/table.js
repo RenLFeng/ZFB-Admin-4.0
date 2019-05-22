@@ -120,7 +120,7 @@ export const partnerTitle = [
     prop: 'profit'
   },
   {
-    title: '省级分润',
+    title: '分公司分润',
     prop: 'upProfit'
   }
 ]
@@ -140,7 +140,7 @@ export const vipTitle = [
     prop: 'profit'
   },
   {
-    title: '省级分润(元)',
+    title: '分公司分润(元)',
     prop: 'upProfit'
   }
 ]

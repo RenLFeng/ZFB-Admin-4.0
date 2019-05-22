@@ -244,7 +244,7 @@ import withdrawDetails from '../views/treasuryManagement/withdrawDetails'
 import recommendDetails from './recommendDetails'
 import teamDistributionMonthDetail from '../views/profitDistribution/posDistribution/teamProfitDistribution/teamDistributionMonthDetail/repayIndex' // 设备合伙人分润弹窗
 import orgDistributionDetail from '../views/profitDistribution/posDistribution/orgProfitDistribution/orgDistributionDetail' // 设备机构分润弹窗
-import provinceDistributionDetail from '../views/profitDistribution/posDistribution/provinceProfitDistribution/provinceDistributionDetail' // 设备省级分润弹窗
+import provinceDistributionDetail from '../views/profitDistribution/posDistribution/provinceProfitDistribution/provinceDistributionDetail' // 设备分公司分润弹窗
 import { levelMap } from '../server/level.js'
 
 const dealTypeMap = {
@@ -463,7 +463,7 @@ export default {
     teamCloseDetail() {
       this.teamDetailShow = false
     },
-    // 省级
+    // 分公司
     provincecloseDetail() {
       this.provincedetailShow = false
     },

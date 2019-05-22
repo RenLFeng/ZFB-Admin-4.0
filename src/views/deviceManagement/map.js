@@ -1,6 +1,6 @@
 export const serachBody = {
   devNo: '', // 设备编号
-  provinciaLevelName: '', // 所属省级名称
+  provinciaLevelName: '', // 所属分公司名称
   orgName: '', // 所属机构名称
   partnerName: '', // 合伙人姓名
   merchantName: '', // 商户姓名

@@ -6,12 +6,12 @@ const PROVINCIAL = levelMap.PROVINCIAL
 
 export const TableTitle = [
   {
-    title: '省级编号',
+    title: '分公司编号',
     prop: 'organAccount',
     level: [PLATFORM, PROVINCIAL]
   },
   {
-    title: '省级名称',
+    title: '分公司名称',
     prop: 'organName',
     level: [PLATFORM, PROVINCIAL]
   },
@@ -21,12 +21,12 @@ export const TableTitle = [
     level: [PLATFORM, PROVINCIAL]
   },
   {
-    title: '省级总交易量(元)',
+    title: '分公司总交易量(元)',
     prop: 'totalPerformance',
     level: [PLATFORM, PROVINCIAL]
   },
   {
-    title: '省级总分润(元)',
+    title: '分公司总分润(元)',
     prop: 'totalProfit',
     level: [PLATFORM, PROVINCIAL]
   },
@@ -36,7 +36,7 @@ export const TableTitle = [
     level: [PLATFORM, PROVINCIAL]
   },
   {
-    title: '省级月结分润(元)',
+    title: '分公司月结分润(元)',
     prop: 'afterProfit',
     level: [PLATFORM, PROVINCIAL]
   },

@@ -18,8 +18,8 @@
           <el-form-item label="合伙人姓名">
             <el-input v-model="screenData.partnerName" placeholder="合伙人姓名" clearable></el-input>
           </el-form-item>
-          <el-form-item v-if="level ===levelMap.PLATFORM" label="所属省级">
-            <el-input v-model="screenData.provinciaLevelName" placeholder="所属省级名称" clearable></el-input>
+          <el-form-item v-if="level ===levelMap.PLATFORM" label="所属分公司">
+            <el-input v-model="screenData.provinciaLevelName" placeholder="所属分公司名称" clearable></el-input>
           </el-form-item>
           <el-form-item v-if="level <=levelMap.PROVINCIAL" label="所属机构">
             <el-input v-model="screenData.orgName" placeholder="所属机构名称" clearable></el-input>
@@ -368,7 +368,7 @@ export default {
         brandId: this.screenData.brandId, // 选择设备型号
         startDevNo: this.screenData.startDevNo,
         endDevNo: this.screenData.endDevNo,
-        provinciaLevelName: this.screenData.provinciaLevelName, // 所属省级名称
+        provinciaLevelName: this.screenData.provinciaLevelName, // 所属分公司名称
         orgName: this.screenData.orgName, // 所属机构名称
         partnerName: this.screenData.partnerName, // 合伙人姓名
         merchantName: this.screenData.merchantName, // 商户姓名

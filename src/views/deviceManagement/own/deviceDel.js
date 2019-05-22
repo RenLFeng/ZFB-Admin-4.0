@@ -12,11 +12,11 @@ export const deviceDelColumn = () => {
     },
     {
       tableProp: 'secOrgan',
-      tableLabel: '二级机构'
+      tableLabel: '高级合伙人'
     },
     {
       tableProp: 'oneOrgan',
-      tableLabel: '一级机构'
+      tableLabel: '子公司'
     },
     {
       tableProp: 'devNo',

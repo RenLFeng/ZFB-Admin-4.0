@@ -99,7 +99,7 @@ export const ReleaseStatusMAP = {
 
 const equipmentReleaseMAP = {
   100: '整体发布',
-  200: '部分省级发布',
+  200: '部分分公司发布',
   300: '部分机构发布'
 }
 

@@ -2,17 +2,17 @@
   <div>
     <div class="searchBox">
       <div class="distributionOverview">
-        <span>省级总交易量: {{totalPerformance|normAmount}} 元</span>
-        <span>省级总分润: {{totalProfit|normAmount}} 元</span>
+        <span>分公司总交易量: {{totalPerformance|normAmount}} 元</span>
+        <span>分公司总分润: {{totalProfit|normAmount}} 元</span>
         <span>机构总分润: {{partnerProfit|normAmount}} 元</span>
-        <span>省级月结分润： {{afterProfit|normAmount}} 元</span>
+        <span>分公司月结分润： {{afterProfit|normAmount}} 元</span>
       </div>
       <el-form :inline="true" class="demo-form-inline" size="small">
         <el-form-item v-if="level === levelMap.PLATFORM">
-          <el-input clearable v-model="organNumber" placeholder="省级编号"></el-input>
+          <el-input clearable v-model="organNumber" placeholder="分公司编号"></el-input>
         </el-form-item>
         <el-form-item v-if="level === levelMap.PLATFORM">
-          <el-input clearable v-model="organName" placeholder="省级名称"></el-input>
+          <el-input clearable v-model="organName" placeholder="分公司名称"></el-input>
         </el-form-item>
         <el-form-item>
           <el-select clearable placeholder="结算状态" v-model="settlementStatus">

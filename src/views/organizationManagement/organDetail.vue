@@ -264,13 +264,13 @@
         <el-col :span="5" v-if="editOrganData.isOpen === 1">
           <el-tag style="margin-bottom:10px">开通合伙人奖励分配规则</el-tag>
           <br>
-          <el-form-item label="省级机构" prop="provinceAmt" v-if="editOrganData.organType === 2">
+          <el-form-item label="分公司机构" prop="provinceAmt" v-if="editOrganData.organType === 2">
             <el-input v-model="editOrganData.provinceAmt" :disabled="canEdit"></el-input>
           </el-form-item>
-          <el-form-item label="一级机构" prop="organAmt" v-if="editOrganData.organType <= 3">
+          <el-form-item label="子公司" prop="organAmt" v-if="editOrganData.organType <= 3">
             <el-input v-model="editOrganData.organAmt" :disabled="canEdit"></el-input>
           </el-form-item>
-          <el-form-item label="二级机构" prop="countyAmt" v-if="editOrganData.organType <= 9">
+          <el-form-item label="高级合伙人" prop="countyAmt" v-if="editOrganData.organType <= 9">
             <el-input v-model="editOrganData.countyAmt" :disabled="canEdit"></el-input>
           </el-form-item>
           <el-form-item label="直属合伙人">{{editOrganData.directAmt}}元</el-form-item>
@@ -349,9 +349,9 @@ export default {
         cardPhone: [{ required: true, message: '请输入预留手机号', trigger: 'blur' }],
         phone: [{ required: true, message: '请输入联系方式', trigger: 'blur' }],
         area: [{ required: true, message: '请输入详细地址', trigger: 'blur' }],
-        provinceAmt: [{ required: true, message: '请输入省级机构开通合伙人奖励', trigger: 'blur' }],
-        organAmt: [{ required: true, message: '请输入一级机构开通合伙人奖励', trigger: 'blur' }],
-        countyAmt: [{ required: true, message: '请输入二级机构开通合伙人奖励', trigger: 'blur' }]
+        provinceAmt: [{ required: true, message: '请输入分公司机构开通合伙人奖励', trigger: 'blur' }],
+        organAmt: [{ required: true, message: '请输入子公司开通合伙人奖励', trigger: 'blur' }],
+        countyAmt: [{ required: true, message: '请输入高级合伙人开通合伙人奖励', trigger: 'blur' }]
       }
     }
   },

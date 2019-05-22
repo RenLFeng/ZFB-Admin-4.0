@@ -77,13 +77,13 @@
                   <span>{{ props.row.openPatenerRewardAmount }} 元</span>
                 </el-form-item>
                 <h4 style="font-size:16px">开通合伙人奖励分配规则</h4>
-                <el-form-item label="省级机构">
+                <el-form-item label="分公司机构">
                   <span>{{ props.row.provRewardAmount }} 元</span>
                 </el-form-item>
-                <el-form-item label="一级机构">
+                <el-form-item label="子公司">
                   <span>{{ props.row.onelevelOrganRewardAmount }} 元</span>
                 </el-form-item>
-                <el-form-item label="二级机构">
+                <el-form-item label="高级合伙人">
                   <span>{{ props.row.twolevelOrganRewardAmount }} 元</span>
                 </el-form-item>
                 <el-form-item label="直接合伙人">

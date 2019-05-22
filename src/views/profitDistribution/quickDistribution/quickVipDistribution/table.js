@@ -17,17 +17,17 @@ export const TableTitle = [
     level: [PLATFORM, PROVINCIAL, ORGAN, SECONDORGAN]
   },
   {
-    title: '二级机构',
+    title: '高级合伙人',
     prop: 'countyName',
     level: [PLATFORM, PROVINCIAL, ORGAN]
   },
   {
-    title: '一级机构',
+    title: '子公司',
     prop: 'organName',
     level: [PLATFORM, PROVINCIAL]
   },
   {
-    title: '省级机构',
+    title: '分公司机构',
     prop: 'provinceName',
     level: [PLATFORM]
   },

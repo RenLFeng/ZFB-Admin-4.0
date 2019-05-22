@@ -20,12 +20,15 @@
           <el-tab-pane v-if="canofflineMerchant" label="设备商户" name="offline-merchant">
             <offline-merchant @todetails="todetails" :merchant="merchant"></offline-merchant>
           </el-tab-pane>
+          <!-- 
           <el-tab-pane label="VIP" name="vip" v-if="canVip">
             <online-vip @todetails="todetails"></online-vip>
           </el-tab-pane>
+
           <el-tab-pane label="线上用户" name="online-user" v-if="canonlineMerchant">
             <online-user @todetails="todetails"></online-user>
           </el-tab-pane>
+          -->
         </el-tabs>
       </div>
     </div>

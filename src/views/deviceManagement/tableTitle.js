@@ -23,7 +23,7 @@ export const TableTitle = [
     level: [PLATFORM, PROVINCIAL, ORGAN, SECONDORGAN]
   },
   // {
-  //   title: '二级机构',
+  //   title: '高级合伙人',
   //   prop: 'sceOrganProxyName',
   //   level: [PLATFORM, PROVINCIAL, ORGAN],
   //   width: 130
@@ -35,7 +35,7 @@ export const TableTitle = [
     width: 130
   },
   {
-    title: '省级机构',
+    title: '分公司机构',
     prop: 'provinceProxyName',
     level: [PLATFORM],
     width: 150

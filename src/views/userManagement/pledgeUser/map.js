@@ -17,17 +17,17 @@ export const TableHead = [
     level: [PLATFORM, PROVINCIAL, ORGAN, SECONDORGAN]
   },
   {
-    label: '二级机构',
+    label: '高级合伙人',
     prop: 'secOrganInfo',
     level: [PLATFORM, PROVINCIAL, ORGAN]
   },
   {
-    label: '一级机构',
+    label: '子公司',
     prop: 'oneOrganInfo',
     level: [PLATFORM, PROVINCIAL]
   },
   {
-    label: '省级机构',
+    label: '分公司机构',
     prop: 'proOrganInfo',
     level: [PLATFORM]
   },
@@ -129,21 +129,21 @@ export const searchCondition = [
   // },
   {
     type: 'input',
-    label: '二级机构',
+    label: '高级合伙人',
     placeholder: '请输入名称或编号',
     searchValue: 'secOrganName',
     level: [PLATFORM, PROVINCIAL, ORGAN]
   },
   {
     type: 'input',
-    label: '一级机构',
+    label: '子公司',
     placeholder: '请输入名称或编号',
     searchValue: 'oneOrganName',
     level: [PLATFORM, PROVINCIAL]
   },
   {
     type: 'input',
-    label: '省级机构',
+    label: '分公司机构',
     placeholder: '请输入名称或编号',
     searchValue: 'proOrganName',
     level: [PLATFORM]
