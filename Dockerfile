@@ -1,10 +1,10 @@
-FROM yarn:latest AS DEP
+FROM sanzhong-yarn:latest AS DEP
 COPY yarn.lock /usr/app/yarn.lock
 COPY package.json /usr/app/package.json
 WORKDIR /usr/app
 RUN yarn
 
-FROM vue:latest AS HTML
+FROM sanzhong-vue:latest AS HTML
 COPY --from=DEP /usr/app/node_modules /usr/app/node_modules
 COPY src /usr/app/src
 COPY public /usr/app/public
