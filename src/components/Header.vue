@@ -53,7 +53,7 @@ export default {
       name: '',
       message: 0,
       showPd: false,
-      headTitle: '优享钜管理平台'
+      headTitle: '三众管理平台'
     }
   },
   computed: {
@@ -98,7 +98,7 @@ export default {
     if (process.env.NODE_ENV !== 'production') {
       const level = Number(getDataFormlocalStorage('level'))
       const levelName = level === 1 ? '平台' : level === 2 ? '分公司' : level === 3 ? '一级' : '二级'
-      this.headTitle = `优享钜管理平台【${process.env.NODE_ENV}】【${
+      this.headTitle = `三众管理平台【${process.env.NODE_ENV}】【${
         process.env.VUE_APP_HOST
       }】【 ${levelName} 】`
     }

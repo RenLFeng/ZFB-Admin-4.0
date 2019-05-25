@@ -7,7 +7,7 @@ Description
 <template>
   <div class="qrCodeCon">
     <div class="qrCodeBox">
-      <p>{{username}}邀请你加入优享钜</p>
+      <p>{{username}}邀请你加入三众</p>
       <div class="qrDiv">
         <img :src="codeUrl" alt>
       </div>

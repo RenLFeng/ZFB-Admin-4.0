@@ -1,7 +1,7 @@
 <template>
   <div class="login-wrap">
     <div class="ms-login">
-      <div class="ms-title">优享钜平台管理后台</div>
+      <div class="ms-title">三众平台管理后台</div>
       <el-form
         :model="login"
         :rules="login.rules"
