@@ -7,10 +7,13 @@
       </el-breadcrumb>
     </div>
     <el-tabs v-model="activeName" style="margin-left:15px">
+      <!-- <el-tab-pane label="客服电话" name="systemFee">
+        <sysem-fee></sysem-fee>
+      </el-tab-pane>-->
       <el-tab-pane label="分润配置" name="systemFee">
         <sysem-fee></sysem-fee>
       </el-tab-pane>
-      <el-tab-pane label="押金配置" name="cashPledge" v-if="candepositConfig">
+      <el-tab-pane label="活动配置" name="cashPledge" v-if="candepositConfig">
         <cash-pledge @addCashPledge="addCashPledge" v-if="addCashPledgeShow===1"></cash-pledge>
         <add-cash-pledge
           @goBack="goBack"

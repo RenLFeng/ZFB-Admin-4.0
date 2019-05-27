@@ -13,7 +13,7 @@ export const allUserTableTitle = [
     level: [levelMap.PLATFORM, levelMap.PROVINCIAL, levelMap.ORGAN, levelMap.SECONDORGAN]
   },
   {
-    title: '线上推荐人',
+    title: '推荐人',
     prop: 'inviteName',
     level: [levelMap.PLATFORM, levelMap.PROVINCIAL, levelMap.ORGAN, levelMap.SECONDORGAN]
   },

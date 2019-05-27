@@ -53,8 +53,6 @@ yarn run test:unit
 ├── App.vue
 ├── assets #资源文件
 │   ├── login-bg.jpg
-│   ├── logo.png
-│   └── verification.jpg
 ├── components #组件
 │   ├── Header.vue
 │   ├── Sidebar.vue

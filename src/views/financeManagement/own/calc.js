@@ -99,7 +99,7 @@ export const organWithdrawalBaseColumn = () => {
     },
     {
       tableProp: 'organLevel',
-      tableLabel: '机构等级'
+      tableLabel: '机构类型'
     },
     {
       tableProp: 'currBlance',

@@ -19,6 +19,7 @@
       </p>
       <el-slider v-model="posRepayFee" range :max="40" :step="0.1" style="width:100%"></el-slider>
     </div>
+    <!--  
     <div class="slider">
       <p>
         快捷还款分润费率
@@ -33,6 +34,8 @@
       </p>
       <el-slider v-model="quickRepayFee" range :max="40" :step="0.1" style="width:100%"></el-slider>
     </div>
+    -->
+
     <div class="btn">
       <el-button type="primary" @click="saveFee">保存配置</el-button>
     </div>
@@ -69,9 +72,9 @@ export default {
       levelFee: {},
       type: '',
       posPayFee: [0, 0],
-      posRepayFee: [0, 0],
-      quickRepayFee: [0, 0],
-      quickPayFee: [0, 0]
+      posRepayFee: [0, 0]
+      // quickRepayFee: [0, 0],
+      // quickPayFee: [0, 0]
     }
   },
   watch: {
@@ -79,8 +82,8 @@ export default {
       this.levelFee = this.queryFee[Number(this.systemFeeActive)]
       this.posPayFee = [this.levelFee.posPayFee.minFee, this.levelFee.posPayFee.maxFee]
       this.posRepayFee = [this.levelFee.posRepayFee.minFee, this.levelFee.posRepayFee.maxFee]
-      this.quickRepayFee = [this.levelFee.quickRepayFee.minFee, this.levelFee.quickRepayFee.maxFee]
-      this.quickPayFee = [this.levelFee.quickPayFee.minFee, this.levelFee.quickPayFee.maxFee]
+      // this.quickRepayFee = [this.levelFee.quickRepayFee.minFee, this.levelFee.quickRepayFee.maxFee]
+      // this.quickPayFee = [this.levelFee.quickPayFee.minFee, this.levelFee.quickPayFee.maxFee]
       this.type = this.levelFee.type
     }
   },
@@ -95,8 +98,8 @@ export default {
         this.type = levelFee.type
         this.posPayFee = [levelFee.posPayFee.minFee, levelFee.posPayFee.maxFee]
         this.posRepayFee = [levelFee.posRepayFee.minFee, levelFee.posRepayFee.maxFee]
-        this.quickRepayFee = [levelFee.quickRepayFee.minFee, levelFee.quickRepayFee.maxFee]
-        this.quickPayFee = [levelFee.quickPayFee.minFee, levelFee.quickPayFee.maxFee]
+        // this.quickRepayFee = [levelFee.quickRepayFee.minFee, levelFee.quickRepayFee.maxFee]
+        // this.quickPayFee = [levelFee.quickPayFee.minFee, levelFee.quickPayFee.maxFee]
       } catch (error) {
         console.log(error)
       }
@@ -111,15 +114,15 @@ export default {
         posRepayFee: {
           minFee: this.posRepayFee[0],
           maxFee: this.posRepayFee[1]
-        },
-        quickPayFee: {
-          minFee: this.quickPayFee[0],
-          maxFee: this.quickPayFee[1]
-        },
-        quickRepayFee: {
-          minFee: this.quickRepayFee[0],
-          maxFee: this.quickRepayFee[1]
         }
+        // quickPayFee: {
+        //   minFee: this.quickPayFee[0],
+        //   maxFee: this.quickPayFee[1]
+        // },
+        // quickRepayFee: {
+        // minFee: this.quickRepayFee[0],
+        // maxFee: this.quickRepayFee[1]
+        // }
       }
       try {
         this.$axios.post(saveFee, body).then(res => {

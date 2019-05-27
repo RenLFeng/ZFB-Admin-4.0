@@ -12,7 +12,7 @@
         </el-table-column>
         <el-table-column
           property="provinceAmt"
-          label="押金扣除分润(元)"
+          label="活动扣除分润(元)"
           v-if="dealType===dealTypeMap.REPAY"
         >
           <template slot-scope="scope">{{scope.row.depositProfit|normAmount}}</template>

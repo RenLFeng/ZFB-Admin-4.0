@@ -15,7 +15,7 @@
           <el-form-item label="还款状态">{{userInfo.payStatus|payStatusText}}</el-form-item>
         </el-col>
         <el-col :span="8">
-          <el-form-item label="缴纳押金时间">{{userInfo.payDepositTime|cutTime}}</el-form-item>
+          <el-form-item label="支付时间">{{userInfo.payDepositTime|cutTime}}</el-form-item>
           <el-form-item label="开始时间" v-if="userInfo.beginTime">{{userInfo.beginTime|cutTime}}</el-form-item>
           <el-form-item label="结束时间" v-if="userInfo.endTime">{{userInfo.endTime|cutTime}}</el-form-item>
         </el-col>

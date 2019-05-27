@@ -23,7 +23,7 @@
       >切换活动</el-button>
       <el-button type="danger" plain size="small" v-if="enableRuleName" @click="close">关闭活动</el-button>
       <div class="operation">
-        <el-button type="primary" plain icon="el-icon-plus" size="small" @click="addCashPledge">押金规则</el-button>
+        <el-button type="primary" plain icon="el-icon-plus" size="small" @click="addCashPledge">活动规则</el-button>
       </div>
     </div>
     <el-table :data="cashPledgeData" border style="width: 100%">

@@ -1,87 +1,47 @@
 <template>
   <div>
-    <el-dialog
-      :title="title"
-      :before-close="bankHide"
-      :visible="true"
-    >
+    <el-dialog :title="title" :before-close="bankHide" :visible="true">
       <el-form
         size="small"
-        :rules='rules'
+        :rules="rules"
         ref="bankForm"
-        :model='currentBank'
+        :model="currentBank"
         class="demo-form-inline"
       >
-        <el-form-item
-          label="银行名称"
-          label-width="80px"
-          prop='btName'
-        >
+        <el-form-item label="银行名称" label-width="80px" prop="btName">
           <el-input v-model="currentBank.btName"></el-input>
         </el-form-item>
-        <el-form-item
-          label="银行编码"
-          label-width="80px"
-          prop='btCode'
-        >
+        <el-form-item label="银行编码" label-width="80px" prop="btCode">
           <el-input v-model="currentBank.btCode"></el-input>
         </el-form-item>
-        <el-form-item
-          style="text-indent:.8em"
-          label="是否显示"
-        >
+        <el-form-item style="text-indent:.8em" label="是否显示">
           <el-radio-group v-model="currentBank.isUse">
-            <el-radio
-              v-for="v in useStatus"
-              :label='v.id'
-              :key="v.id"
-            >{{v.value}}</el-radio>
+            <el-radio v-for="v in useStatus" :label="v.id" :key="v.id">{{v.value}}</el-radio>
           </el-radio-group>
         </el-form-item>
-        <el-form-item
-          label="支持"
-          style="text-indent:.8em;"
-        >
-          <el-checkbox
+        <el-form-item label="支持" style="text-indent:.8em;">
+          <!-- <el-checkbox
             v-model="currentBank.onLine"
-            :true-label=0
-            :false-label=1
+            :true-label="0"
+            :false-label="1"
             style="padding-left:28px"
-          >线上交易</el-checkbox>
-          <el-checkbox
-            v-model='currentBank.offline'
-            :true-label=0
-            :false-label=1
-          >线下交易</el-checkbox>
+          >线上交易</el-checkbox>-->
+          <el-checkbox v-model="currentBank.offline" :true-label="0" :false-label="1">线下交易</el-checkbox>
         </el-form-item>
         <el-row style="padding-left:10px">
           <el-col style="padding-bottom:10px">Logo</el-col>
           <el-col>
             <div class="grid-content bg-purple-light">
               <div class="logoBox">
-                <img
-                  class="logoPic"
-                  @click="clickLogo($event)"
-                  :src="currentBank.bankLogo"
-                >
-                <input
-                  type="file"
-                  class="hidden_file_input"
-                  @change="getlogo($event)"
-                >
+                <img class="logoPic" @click="clickLogo($event)" :src="currentBank.bankLogo">
+                <input type="file" class="hidden_file_input" @change="getlogo($event)">
               </div>
             </div>
           </el-col>
         </el-row>
       </el-form>
-      <div
-        slot="footer"
-        class="dialog-footer"
-      >
-        <el-button
-          type="primary"
-          @click='actBank("bankForm")'
-        > 保 存</el-button>
+      <div slot="footer" class="dialog-footer">
+        <el-button type="primary" @click="actBank('bankForm')">保 存</el-button>
       </div>
     </el-dialog>
   </div>
@@ -107,8 +67,8 @@ export default {
         bankLogo: '',
         btName: '',
         isUse: 1,
-        offline: 0,
-        onLine: 0
+        offline: 0
+        // onLine: 0
       },
       logoPic: '',
       rules: {
@@ -158,7 +118,7 @@ export default {
             btCode: this.currentBank.btCode,
             btName: this.currentBank.btName,
             offline: this.currentBank.offline,
-            onLine: this.currentBank.onLine,
+            // onLine: this.currentBank.onLine,
             isUse: this.currentBank.isUse
           },
           fileForm: {
@@ -184,7 +144,7 @@ export default {
             bankId: this.currentBank.bankId,
             btName: this.currentBank.btName,
             offline: this.currentBank.offline,
-            onLine: this.currentBank.onLine,
+            // onLine: this.currentBank.onLine,
             isUse: this.currentBank.isUse
           },
           fileForm: {

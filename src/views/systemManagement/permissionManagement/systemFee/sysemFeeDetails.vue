@@ -44,11 +44,11 @@
           ></el-input>
         </el-form-item>
         <br>
-        <el-form-item label="快捷还款分润费率">
+        <!-- <el-form-item label="快捷还款分润费率">
           <el-tooltip content="只能输入整数或一位小数" placement="top" effect="light">
             <i class="el-icon-info" style="color:#e6a23c"></i>
           </el-tooltip>
-        </el-form-item>
+        </el-form-item>-->
         <el-form-item label="万" label-width="30px">
           <el-input
             type="number"

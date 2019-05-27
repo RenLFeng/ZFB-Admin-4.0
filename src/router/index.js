@@ -63,7 +63,7 @@ export function createRouter() {
           },
           {
             meta: {
-              title: '押金商户'
+              title: '活动商户'
             },
             path: '/pledgeUser',
             component: () => import('../views/userManagement/pledgeUser/pledgeUser.vue')
@@ -237,46 +237,45 @@ export function createRouter() {
             path: '/cashout',
             component: () => import('../views/transactionManagement/posTransaction/cashout.vue')
           },
-          {
-            meta: {
-              title: '快捷计划管理'
-            },
-            path: '/quickPlanManagement',
-            component: () =>
-              import('../views/transactionManagement/quickTransaction/quickPlanManagement.vue')
-          },
-
-          {
-            meta: {
-              title: '快捷还款查询'
-            },
-            path: '/quickRepayments',
-            component: () =>
-              import('../views/transactionManagement/quickTransaction/quickRepayments.vue')
-          },
-          {
-            meta: {
-              title: '快捷消费查询'
-            },
-            path: '/quickPayments',
-            component: () =>
-              import('../views/transactionManagement/quickTransaction/quickPayments.vue')
-          },
-          {
-            meta: {
-              title: '快捷收款查询'
-            },
-            path: '/quickCashout',
-            component: () =>
-              import('../views/transactionManagement/quickTransaction/quickCashout.vue')
-          },
-          {
-            meta: {
-              title: '订单中心'
-            },
-            path: '/orderCenter',
-            component: () => import('../views/orderManagement/orderCenter.vue')
-          },
+          // {
+          //   meta: {
+          //     title: '快捷计划管理'
+          //   },
+          //   path: '/quickPlanManagement',
+          //   component: () =>
+          //     import('../views/transactionManagement/quickTransaction/quickPlanManagement.vue')
+          // },
+          // {
+          //   meta: {
+          //     title: '快捷还款查询'
+          //   },
+          //   path: '/quickRepayments',
+          //   component: () =>
+          //     import('../views/transactionManagement/quickTransaction/quickRepayments.vue')
+          // },
+          // {
+          //   meta: {
+          //     title: '快捷消费查询'
+          //   },
+          //   path: '/quickPayments',
+          //   component: () =>
+          //     import('../views/transactionManagement/quickTransaction/quickPayments.vue')
+          // },
+          // {
+          //   meta: {
+          //     title: '快捷收款查询'
+          //   },
+          //   path: '/quickCashout',
+          //   component: () =>
+          //     import('../views/transactionManagement/quickTransaction/quickCashout.vue')
+          // },
+          // {
+          //   meta: {
+          //     title: '订单中心'
+          //   },
+          //   path: '/orderCenter',
+          //   component: () => import('../views/orderManagement/orderCenter.vue')
+          // },
           {
             meta: {
               title: '设备订单'
@@ -284,20 +283,20 @@ export function createRouter() {
             path: '/deviceOrder',
             component: () => import('../views/orderManagement/deviceOrder.vue')
           },
-          {
-            meta: {
-              title: '端口订单'
-            },
-            path: '/slotOrder',
-            component: () => import('../views/orderManagement/slotOrder.vue')
-          },
-          {
-            meta: {
-              title: '测评订单'
-            },
-            path: '/evaluationOrder',
-            component: () => import('../views/orderManagement/evaluationOrder.vue')
-          },
+          // {
+          //   meta: {
+          //     title: '端口订单'
+          //   },
+          //   path: '/slotOrder',
+          //   component: () => import('../views/orderManagement/slotOrder.vue')
+          // },
+          // {
+          // meta: {
+          // title: '测评订单'
+          // },
+          // path: '/evaluationOrder',
+          // component: () => import('../views/orderManagement/evaluationOrder.vue')
+          // },
           // {
           //   meta: {
           //     title: '交易订单'
@@ -393,20 +392,20 @@ export function createRouter() {
             path: '/bank',
             component: () => import('../views/platformManagement/bank.vue')
           },
-          {
-            meta: {
-              title: '还款通道'
-            },
-            path: '/repaymentChannel',
-            component: () => import('../views/channelManagement/repaymentChannel.vue')
-          },
-          {
-            meta: {
-              title: '收款通道'
-            },
-            path: '/receiptChannel',
-            component: () => import('../views/channelManagement/receiptChannel.vue')
-          },
+          // {
+          //   meta: {
+          //     title: '还款通道'
+          //   },
+          //   path: '/repaymentChannel',
+          //   component: () => import('../views/channelManagement/repaymentChannel.vue')
+          // },
+          // {
+          //   meta: {
+          //     title: '收款通道'
+          //   },
+          //   path: '/receiptChannel',
+          //   component: () => import('../views/channelManagement/receiptChannel.vue')
+          // },
           // {
           //   meta: {
           //     title: '鉴权记录'

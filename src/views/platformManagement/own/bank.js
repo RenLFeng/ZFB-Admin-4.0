@@ -13,10 +13,10 @@ export const bankBaseColumn = () => {
       tableProp: 'newOffline',
       tableLabel: '线下交易'
     },
-    {
-      tableProp: 'newOnLine',
-      tableLabel: '线上交易'
-    },
+    // {
+    //   tableProp: 'newOnLine',
+    //   tableLabel: '线上交易'
+    // },
     {
       tableProp: 'newIsUse',
       tableLabel: '是否显示'

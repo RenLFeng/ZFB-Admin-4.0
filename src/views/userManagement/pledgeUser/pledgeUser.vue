@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="base-tit">
-      <Breadcrumb item="会员管理,押金商户"></Breadcrumb>
+      <Breadcrumb item="会员管理,活动商户"></Breadcrumb>
     </div>
     <p style="text-align:right">
       <el-button @click="toggle" type="text" :icon="icon">{{btnText}}</el-button>
@@ -10,8 +10,8 @@
       <el-form-item v-for="a in searchConditionList" :key="a.label" :label="a.label">
         <el-input v-model="searchData[a.searchValue]" clearable :placeholder="a.placeholder"></el-input>
       </el-form-item>
-      <el-form-item label="押金规则">
-        <el-select clearable placeholder="押金规则" v-model="searchData.ruleId">
+      <el-form-item label="活动规则">
+        <el-select clearable placeholder="活动规则" v-model="searchData.ruleId">
           <el-option :label="v.ruleName" :value="v.ruleId" v-for="v in ruleAllData" :key="v.ruleId"></el-option>
         </el-select>
       </el-form-item>

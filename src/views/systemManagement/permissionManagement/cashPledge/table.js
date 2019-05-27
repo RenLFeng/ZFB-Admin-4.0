@@ -10,7 +10,7 @@ export const TableTitle = [
     prop: 'brandSubName'
   },
   {
-    title: '押金金额(元)',
+    title: '服务费(元)',
     prop: 'depositAmt'
   },
   {
@@ -18,7 +18,7 @@ export const TableTitle = [
     prop: 'totalTradeAmt'
   },
   {
-    title: '押金期限(天)',
+    title: '活动期限(天)',
     prop: 'depositCycle'
   },
   {

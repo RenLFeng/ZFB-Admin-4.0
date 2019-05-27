@@ -13,12 +13,12 @@
             <el-form-item label="设备收款分润" v-if="type !== typeMap.USERS||isPartner">
               <span>总共{{profitAllData.monthCollectionProfitCount}}个月，收款总分润{{profitAllData.monthCollectionProfit|normAmount}}元</span>
             </el-form-item>
-            <el-form-item label="快捷还款分润">
+            <!-- <el-form-item label="快捷还款分润">
               <span>总共{{profitAllData.monthRepaymentProfitCountVip?profitAllData.monthRepaymentProfitCountVip:0}}个月，还款总分润{{profitAllData.monthRepaymentProfitVip|normAmount}}元</span>
-            </el-form-item>
-            <el-form-item label="快捷收款分润">
+            </el-form-item>-->
+            <!-- <el-form-item label="快捷收款分润">
               <span>总共{{profitAllData.monthCollectionProfitCountVip?profitAllData.monthCollectionProfitCountVip:0}}个月，收款总分润{{profitAllData.monthCollectionProfitVip|normAmount}}元</span>
-            </el-form-item>
+            </el-form-item>-->
             <el-form-item
               v-if="type !== typeMap.USERS&&accountinfo.organLevel !== Number(levelMap.SECONDORGAN)"
               label="返现奖励"
@@ -90,7 +90,7 @@
         ></el-date-picker>
       </div>
       <el-form label-width="130px" label-position="left">
-        <el-row class="Options">
+        <!-- <el-row class="Options">
           <el-col :span="10">
             <el-form-item label="快捷还款分润">
               <span>{{monthVal}}，还款分润{{monthProfitData.monthRepaymentProfitVip|normAmount}}元</span>
@@ -99,8 +99,8 @@
           <span style="color:#999;font-size:12px">
             <i class="el-icon-info" style="width:30px"></i> 每月15号结算上个月的分润
           </span>
-        </el-row>
-        <el-row class="Options">
+        </el-row>-->
+        <!-- <el-row class="Options">
           <el-col :span="10">
             <el-form-item label="快捷收款分润">
               <span>{{monthVal}}，收款分润{{monthProfitData.monthCollectionProfitVip|normAmount}}元</span>
@@ -109,7 +109,7 @@
           <span style="color:#999;font-size:12px">
             <i class="el-icon-info" style="width:30px"></i> 每月15号结算上个月的分润
           </span>
-        </el-row>
+        </el-row>-->
         <el-row class="Options" v-if="type !== typeMap.USERS||isPartner">
           <el-col :span="10">
             <el-form-item label="设备还款分润">

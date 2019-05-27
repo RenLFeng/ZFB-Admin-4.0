@@ -37,12 +37,12 @@ export const TableHead = [
     level: [PLATFORM, PROVINCIAL, ORGAN, SECONDORGAN]
   },
   {
-    label: '押金规则',
+    label: '活动规则',
     prop: 'ruleName',
     level: [PLATFORM, PROVINCIAL, ORGAN, SECONDORGAN]
   },
   {
-    label: '押金(元)',
+    label: '服务费(元)',
     prop: 'depositAmt',
     level: [PLATFORM, PROVINCIAL, ORGAN, SECONDORGAN]
   },

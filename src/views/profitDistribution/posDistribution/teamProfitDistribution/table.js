@@ -47,21 +47,21 @@ export const MonthTableTitle = [
     prop: 'profitReward',
     level: [PLATFORM, PROVINCIAL, ORGAN, SECONDORGAN]
   },
-  {
-    title: '管理奖(元)',
-    prop: 'manageReward',
-    level: [PLATFORM, PROVINCIAL, ORGAN, SECONDORGAN]
-  },
-  {
-    title: '卓越奖(元)',
-    prop: 'brilliantReward',
-    level: [PLATFORM, PROVINCIAL, ORGAN, SECONDORGAN]
-  },
-  {
-    title: '荣耀奖(元)',
-    prop: 'honourReward',
-    level: [PLATFORM, PROVINCIAL, ORGAN, SECONDORGAN]
-  },
+  // {
+  //   title: '管理奖(元)',
+  //   prop: 'manageReward',
+  //   level: [PLATFORM, PROVINCIAL, ORGAN, SECONDORGAN]
+  // },
+  // {
+  //   title: '卓越奖(元)',
+  //   prop: 'brilliantReward',
+  //   level: [PLATFORM, PROVINCIAL, ORGAN, SECONDORGAN]
+  // },
+  // {
+  //   title: '荣耀奖(元)',
+  //   prop: 'honourReward',
+  //   level: [PLATFORM, PROVINCIAL, ORGAN, SECONDORGAN]
+  // },
   {
     title: '日结分润(元)',
     prop: 'dailyProfit',
@@ -122,7 +122,7 @@ export const DayTableTitle = [
     level: [PLATFORM, PROVINCIAL, ORGAN, SECONDORGAN]
   },
   {
-    title: '押金扣除分润(元)',
+    title: '活动扣除分润(元)',
     prop: 'depositProfit',
     level: [PLATFORM, PROVINCIAL, ORGAN, SECONDORGAN],
     type: 'REPAY'
