@@ -2,7 +2,7 @@
   <div>
     <div class="base-tit">
       <Breadcrumb item="机构管理,机构列表"></Breadcrumb>
-      <el-button v-if="canCreateOrganization" type="text" @click="newBtn" icon="el-icon-plus">新建机构</el-button>
+      <el-button v-if="canCreateOrganization" size="small" type="primary" plain @click="newBtn">新建机构</el-button>
     </div>
     <div class="G_grid_1">
       <!-- 搜索 -->
