@@ -52,7 +52,7 @@ export const TableHead = [
     level: [PLATFORM, PROVINCIAL, ORGAN, SECONDORGAN]
   },
   {
-    label: '状态',
+    label: '活动状态',
     prop: 'statusText',
     level: [PLATFORM, PROVINCIAL, ORGAN, SECONDORGAN]
   },

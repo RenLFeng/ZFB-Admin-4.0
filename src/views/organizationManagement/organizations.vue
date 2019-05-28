@@ -265,6 +265,7 @@ export default {
     },
     handleRows(rows) {
       this.listData = ParseRoleList(rows)
+      console.log('listData: ', this.listData)
       this.totalActivateNum = this.getExtra('totalActivateNum')
       this.totalInventoryNum = this.getExtra('totalInventoryNum')
       this.totalIssuedNum = this.getExtra('totalIssuedNum')

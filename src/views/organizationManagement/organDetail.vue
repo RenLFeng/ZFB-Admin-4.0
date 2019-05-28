@@ -145,6 +145,7 @@
                 <div class="grid-content bg-purple">{{ editOrganData.posOutNumber }}台</div>
               </el-col>
             </el-row>
+            <!--
             <el-row style="margin:0 0 20px 20px" :gutter="20">
               <el-col :span="12">
                 <el-dropdown style="margin-top: -22px">
@@ -169,7 +170,7 @@
               <el-col :span="12">
                 <div class="grid-content bg-purple">{{ editOrganData.codeInventory }}个</div>
               </el-col>
-            </el-row>
+            </el-row> 
             <el-row style="margin:0 0 20px 20px" :gutter="20">
               <el-col :span="12">
                 <div class="grid-content bg-purple">激活码下发</div>
@@ -186,6 +187,7 @@
                 <div class="grid-content bg-purple">{{ editOrganData.codeActivateNumber }}个</div>
               </el-col>
             </el-row>
+            -->
           </div>
         </el-col>
         <el-col :span="4">

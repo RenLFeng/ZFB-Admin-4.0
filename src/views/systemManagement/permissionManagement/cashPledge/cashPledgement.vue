@@ -11,7 +11,7 @@
             :value="item.brandId"
           ></el-option>
         </el-select>
-        当前押金活动：{{enableRuleName?enableRuleName: '无'}}
+        当前活动：{{enableRuleName?enableRuleName: '无'}}
       </h3>
       <el-button type="primary" plain size="small" v-if="!enableRuleName" @click="open('open')">开启活动</el-button>
       <el-button

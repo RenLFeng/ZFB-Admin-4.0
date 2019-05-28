@@ -50,19 +50,19 @@ export const TableTitle = [
     title: '剩余库存(台)',
     prop: 'inventoryNum',
     level: [levelMap.PLATFORM, levelMap.PROVINCIAL, levelMap.ORGAN, levelMap.SECONDORGAN],
-    width: 135
+    width: 100
   },
   {
     title: '下发数量(台)',
     prop: 'issuedNum',
     level: [levelMap.PLATFORM, levelMap.PROVINCIAL, levelMap.ORGAN, levelMap.SECONDORGAN],
-    width: 135
+    width: 100
   },
   {
     title: '设备激活数(台)',
     prop: 'activateNum',
     level: [levelMap.PLATFORM, levelMap.PROVINCIAL, levelMap.ORGAN, levelMap.SECONDORGAN],
-    width: 135
+    width: 100
   },
   // {
   //   title: '激活码库存(个)',

@@ -19,7 +19,7 @@
       <el-form-item label="规则名称" prop="ruleName">
         <el-input v-model="addCashPledgeData.ruleName"></el-input>
       </el-form-item>
-      <el-form-item label="押金金额" prop="depositAmt">
+      <el-form-item label="服务费" prop="depositAmt">
         <el-input type="number" v-model="addCashPledgeData.depositAmt"></el-input>
       </el-form-item>
       <el-form-item>元</el-form-item>
@@ -27,13 +27,13 @@
         <el-input type="number" v-model="addCashPledgeData.totalTradeAmt"></el-input>
       </el-form-item>
       <el-form-item>万</el-form-item>
-      <el-form-item label="押金期限" prop="depositCycle">
+      <el-form-item label="活动期限" prop="depositCycle">
         <el-input type="number" v-model="addCashPledgeData.depositCycle"></el-input>
       </el-form-item>
       <el-form-item>天</el-form-item>
       <el-row class="expand" :gutter="20">
         <el-col :span="12">
-          <el-tag>押金阶段</el-tag>
+          <el-tag>活动阶段</el-tag>
           <div v-for="(v,i) in addCashPledgeData.depositStagePO" :key="i">
             <el-form-item :label="v.label+(i+1)" prop="depositStagePO">
               <el-input type="number" v-model="v.totalTradeAmt" @blur="estimate(v.totalTradeAmt,i)"></el-input>
@@ -54,14 +54,14 @@
           </p>
         </el-col>
         <el-col :span="12">
-          <el-tag>押金分润扣除规则</el-tag>
+          <el-tag>活动分润扣除规则</el-tag>
           <br>
-          <el-form-item label="押金分润扣除总额" prop="feeSum">
+          <el-form-item label="活动分润扣除总额" prop="feeSum">
             <span>万</span>
             <el-input type="number" v-model="addCashPledgeData.feeSum" style="width: 150px"></el-input>
           </el-form-item>
           <br>
-          <el-tag>押金分润扣除分配规则</el-tag>
+          <el-tag>活动分润扣除分配规则</el-tag>
           <br>
           <el-form-item
             :label="v.label"
@@ -106,9 +106,9 @@ export default {
     }
     const depositCycleNumber = (rule, value, callback) => {
       if (!value) {
-        return callback(new Error('请输入押金期限'))
+        return callback(new Error('请输入活动期限'))
       } else if (value.length > 4) {
-        callback(new Error('押金期限长度最多为4'))
+        callback(new Error('活动期限长度最多为4'))
       } else {
         callback()
       }
@@ -137,12 +137,12 @@ export default {
       rules: {
         brandId: { required: true, message: '请选择设备型号', trigger: 'change' },
         ruleName: { required: true, message: '请输入规则名称', trigger: 'blur' },
-        depositAmt: { required: true, message: '请输入押金金额', trigger: 'blur' },
+        depositAmt: { required: true, message: '请输入活动金额', trigger: 'blur' },
         totalTradeAmt: { required: true, validator: checkStockNumber, trigger: 'blur' },
         depositCycle: { required: true, validator: depositCycleNumber, trigger: 'blur' },
-        feeSum: { required: true, message: '请输入押金分润扣除总额', trigger: 'blur' },
+        feeSum: { required: true, message: '请输入活动分润扣除总额', trigger: 'blur' },
         depositStagePO: { required: true, message: '请输入累计还款金额', trigger: 'blur' },
-        depositDeductPO: { required: true, message: '请输入押金分配规则', trigger: 'blur' }
+        depositDeductPO: { required: true, message: '请输入活动分配规则', trigger: 'blur' }
       }
     }
   },
@@ -219,9 +219,9 @@ export default {
       if (totalTradeAmtSum !== Number(this.addCashPledgeData.totalTradeAmt)) {
         this.$message.error('累计还款阶段金额合计必须等于累计还款金额')
       } else if (returnAmtSum !== Number(this.addCashPledgeData.depositAmt)) {
-        this.$message.error('累计还款阶段返现金额合计必须等于押金金额')
+        this.$message.error('累计还款阶段返现金额合计必须等于活动金额')
       } else if (deductPercentSum !== Number(this.addCashPledgeData.feeSum)) {
-        this.$message('押金分润扣除分配合计必须等于押金分润扣除总额')
+        this.$message('活动分润扣除分配合计必须等于活动分润扣除总额')
       } else {
         try {
           const res = await postJOSN({

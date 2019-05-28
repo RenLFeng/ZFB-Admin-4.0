@@ -226,7 +226,7 @@
                 </el-dropdown-menu>
               </el-dropdown>
             </el-form-item>
-            <el-form-item label="激活码库存">
+            <!-- <el-form-item label="激活码库存">
               <span>{{accountinfo.codeInventory}}台</span>
             </el-form-item>
             <el-form-item label="激活码下发">
@@ -234,7 +234,7 @@
             </el-form-item>
             <el-form-item label="激活码激活">
               <span>{{accountinfo.codeActivateNumber}}台</span>
-            </el-form-item>
+            </el-form-item>-->
           </el-col>
           <el-col :span="3">
             <el-tag>分润费率</el-tag>
@@ -381,6 +381,7 @@ export default {
           }
         })
         this.accountinfo = res.data
+        console.log('this.accountinfo: ', this.accountinfo)
       } catch (error) {
         console.log(error)
       }

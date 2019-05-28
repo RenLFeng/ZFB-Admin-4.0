@@ -133,11 +133,11 @@ export const MerchantTableListTitle = [
     prop: 'devNo',
     level: [levelMap.PLATFORM, levelMap.PROVINCIAL, levelMap.ORGAN, levelMap.SECONDORGAN]
   },
-  {
-    title: '端口数量',
-    prop: 'portSum',
-    level: [levelMap.PLATFORM, levelMap.PROVINCIAL, levelMap.ORGAN, levelMap.SECONDORGAN]
-  },
+  // {
+  //   title: '端口数量',
+  //   prop: 'portSum',
+  //   level: [levelMap.PLATFORM, levelMap.PROVINCIAL, levelMap.ORGAN, levelMap.SECONDORGAN]
+  // },
   {
     title: '状态',
     prop: 'disableState',
