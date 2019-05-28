@@ -2,7 +2,8 @@
   <div class="header">
     <!-- 折叠按钮 -->
     <div class="collapse-btn" @click="collapseChange">
-      <i class="el-icon-menu"></i>
+      <!-- <i class="el-icon-menu"></i> -->
+      <img src="../assets/img/logo-icon.png" alt class="logoIcon">
     </div>
     <div class="logo">{{headTitle}}</div>
     <div class="header-right">
@@ -121,6 +122,11 @@ export default {
   padding: 0 21px;
   cursor: pointer;
   line-height: 70px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  height: 100%;
 }
 .collapse-btn:hover {
   background-color: #20a0ff;
@@ -183,5 +189,9 @@ export default {
 }
 .el-dropdown-menu__item {
   text-align: center;
+}
+.logoIcon {
+  width: 32px;
+  height: 32px;
 }
 </style>
