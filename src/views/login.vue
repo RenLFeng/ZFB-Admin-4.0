@@ -10,11 +10,10 @@
         class="ms-content"
       >
         <el-form-item prop="username">
-          <el-input
-            v-model="login.username"
-            placeholder="请输入用户名"
-          >
-            <template slot="prepend"><i class="el-icon-lx-denglu"></i></template>
+          <el-input v-model="login.username" placeholder="请输入用户名">
+            <template slot="prepend">
+              <i class="el-icon-lx-denglu"></i>
+            </template>
           </el-input>
         </el-form-item>
         <el-form-item prop="password">
@@ -24,7 +23,9 @@
             v-model="login.password"
             @keyup.enter.native="dologin"
           >
-            <template slot="prepend"><i class="el-icon-lx-mima"></i></template>
+            <template slot="prepend">
+              <i class="el-icon-lx-mima"></i>
+            </template>
           </el-input>
         </el-form-item>
         <el-form-item prop="verification">
@@ -34,25 +35,16 @@
             class="verification"
             @keyup.enter.native="dologin"
           >
-            <template slot="prepend"><i class="el-icon-lx-yanzhengma"></i></template>
+            <template slot="prepend">
+              <i class="el-icon-lx-yanzhengma"></i>
+            </template>
           </el-input>
-          <img
-            class="varImg"
-            @click="getVerificationCode()"
-            :src="fullVerificationCode"
-            alt=""
-          >
+          <img class="varImg" @click="getVerificationCode()" :src="fullVerificationCode" alt>
         </el-form-item>
         <div class="login-btn">
-          <el-button
-            type="primary"
-            @click="dologin"
-          >登录</el-button>
+          <el-button type="primary" @click="dologin">登录</el-button>
         </div>
-        <p
-          align="center"
-          style="color:red;font-size:12px"
-        >{{login.msg}}</p>
+        <p align="center" style="color:red;font-size:12px">{{login.msg}}</p>
       </el-form>
     </div>
   </div>
@@ -179,7 +171,7 @@ export default {
   left: 50%;
   top: 50%;
   width: 350px;
-  margin: -190px 0 0 -175px;
+  margin: -140px 0 0 -175px;
   border-radius: 5px;
   background: rgba(255, 255, 255, 0.3);
   overflow: hidden;
