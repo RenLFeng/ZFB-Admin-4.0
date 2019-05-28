@@ -53,7 +53,7 @@ export default {
       name: '',
       message: 0,
       showPd: false,
-      headTitle: '三众智付宝管理平台'
+      headTitle: '智付宝管理平台'
     }
   },
   computed: {
@@ -99,7 +99,7 @@ export default {
       const level = Number(getDataFormlocalStorage('level'))
       const levelName =
         level === 1 ? '平台' : level === 2 ? '分公司' : level === 3 ? '一级' : '二级'
-      this.headTitle = `三众智付宝管理平台【${process.env.NODE_ENV}】【${
+      this.headTitle = `智付宝管理平台【${process.env.NODE_ENV}】【${
         process.env.VUE_APP_HOST
       }】【 ${levelName} 】`
     }
