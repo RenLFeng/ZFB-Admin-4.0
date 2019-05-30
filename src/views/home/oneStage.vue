@@ -75,7 +75,7 @@ export default {
   width: 196px;
   height: 196px;
   background-color: white;
-  margin: 65x auto 0;
+  margin: 65px auto 0;
   border-radius: 10px;
   padding: 14px 0;
   box-sizing: border-box;
