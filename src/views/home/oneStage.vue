@@ -1,17 +1,11 @@
-<!--
-Description
-@authors Your Name (you@example.org)
-@date    2018-10-22 15:32:58
-@version 1.0.0
--->
 <template>
   <div class="qrCodeCon">
     <div class="qrCodeBox">
-      <p>{{username}}邀请你加入三众</p>
       <div class="qrDiv">
         <img :src="codeUrl" alt>
       </div>
-      <p class="remmondCode">推荐码:{{referphone}}</p>
+      <p>推荐码:{{referphone}}</p>
+      <p class="remmondCode">{{username}}邀请你加入</p>
     </div>
   </div>
 </template>
@@ -36,20 +30,16 @@ export default {
         })
         this.referphone = res.data.inviteCode
         this.username = res.data.inviteName
-        // console.log(res)
       } catch (err) {
         console.log(err)
       }
     }
   },
   async mounted() {
-    // console.log(window.location.host)
     await this.getInviteInfo()
     let registerPage = process.env.VUE_APP_REGISTER_URL
     let text = `${registerPage}?userPhone=${this.referphone}&username=${this.username}`
-    // console.log('invite:', text)
     this.codeUrl = await qrCode.build(text)
-    // console.log(this.codeUrl)
   }
 }
 </script>
@@ -65,7 +55,7 @@ export default {
 }
 .qrCodeBox {
   position: absolute;
-  top: 260px;
+  top: 316px;
   right: 516px;
   width: 216px;
   height: 295rem;
@@ -79,15 +69,13 @@ export default {
   font-size: 12px;
   color: white;
   text-align: center;
-  padding: 6px 0;
-  margin: 0 auto;
   padding: 0;
 }
 .qrDiv {
   width: 196px;
   height: 196px;
   background-color: white;
-  margin: 42px auto 0;
+  margin: 37px auto 0;
   border-radius: 10px;
   padding: 14px 0;
   box-sizing: border-box;
@@ -106,6 +94,6 @@ p.remmondCode {
   font-size: 16px;
   background-color: #fff;
   border-radius: 16px;
-  margin: 22px 0 0 0;
+  margin: 50 /*  */ px 0 0 0;
 }
 </style>

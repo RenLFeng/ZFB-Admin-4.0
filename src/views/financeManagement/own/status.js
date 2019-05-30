@@ -28,6 +28,10 @@ export const payStatus = {
 }
 export const getOrganLevel = [
   {
+    id: 9,
+    text: '高级合伙人'
+  },
+  {
     id: 2,
     text: '分公司'
   },

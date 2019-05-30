@@ -7,17 +7,8 @@
       :close-on-click-modal="false"
       :before-close="close"
     >
-      <el-form
-        label-width="80px"
-        size="small"
-        :model="selectedOrgan"
-        :rules="rules"
-        ref="ruleForm"
-      >
-        <el-form-item
-          label="选择机构"
-          prop="organ"
-        >
+      <el-form label-width="80px" size="small" :model="selectedOrgan" :rules="rules" ref="ruleForm">
+        <el-form-item label="选择机构" prop="organ">
           <el-select
             v-model="selectedOrgan.organ"
             filterable
@@ -29,8 +20,7 @@
               :key="item.organId"
               :label="item.organName+'('+item.useraccount+')'"
               :value="item.organId"
-            >
-            </el-option>
+            ></el-option>
           </el-select>
         </el-form-item>
         <el-form-item label="账户余额">
@@ -42,33 +32,14 @@
         <el-form-item label="收款人">
           <span>{{selectedOrgan.payee}}</span>
         </el-form-item>
-        <el-form-item
-          label="提现金额"
-          prop="withdrawAmt"
-        >
-          <el-input
-            clearable
-            v-model="selectedOrgan.withdrawAmt"
-            style="width:215px"
-            type="number"
-          ></el-input>
-          <el-button
-            type="primary"
-            plain
-            @click="getAll"
-            style="position:absolute;right:35px"
-          >全部提现</el-button>
+        <el-form-item label="提现金额" prop="withdrawAmt">
+          <el-input clearable v-model="selectedOrgan.withdrawAmt" style="width:215px" type="number"></el-input>
+          <el-button type="primary" plain @click="getAll" style="position:absolute;right:35px">全部提现</el-button>
         </el-form-item>
       </el-form>
-      <span
-        slot="footer"
-        class="dialog-footer"
-      >
+      <span slot="footer" class="dialog-footer">
         <el-button @click="close">取 消</el-button>
-        <el-button
-          type="primary"
-          @click="toWithdraw('ruleForm')"
-        >确 定</el-button>
+        <el-button type="primary" @click="toWithdraw('ruleForm')">确 定</el-button>
       </span>
     </el-dialog>
   </div>

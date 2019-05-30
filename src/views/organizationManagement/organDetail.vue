@@ -26,17 +26,13 @@
               ></el-input>
             </el-form-item>
             <el-form-item label="机构账号" prop="organAccount">
-              <el-input
-                :disabled="!canEditOrganization"
-                v-model="editOrganData.organAccount"
-                autocomplete="off"
-              ></el-input>
+              <el-input disabled v-model="editOrganData.organAccount" autocomplete="off"></el-input>
             </el-form-item>
             <el-form-item label="机构编码" prop="userAccount">
               <el-input disabled v-model="editOrganData.userAccount" autocomplete="off"></el-input>
             </el-form-item>
             <el-form-item label="机构类型" prop="organType">
-              <el-select :disabled="!canEditOrganization" v-model="editOrganData.organType">
+              <el-select disabled v-model="editOrganData.organType">
                 <el-option
                   v-for="(v,i) in getOrganTypeFeeData"
                   :label="v.name"
@@ -340,9 +336,9 @@ export default {
       isEdit: '',
       rules: {
         organName: [{ required: true, message: '请输入机构名称', trigger: 'blur' }],
-        organAccount: [{ required: true, message: '请输入机构账号', trigger: 'blur' }],
+        // organAccount: [{ required: true, message: '请输入机构账号', trigger: 'blur' }],
         organCode: [{ required: true, message: '请输入机构编码', trigger: 'blur' }],
-        organType: [{ required: true, message: '请选择机构类型', trigger: 'change' }],
+        // organType: [{ required: true, message: '请选择机构类型', trigger: 'change' }],
         userName: [{ required: true, message: '请输入姓名', trigger: 'blur' }],
         idCard: [{ required: true, message: '请输入身份证号码', trigger: 'blur' }],
         bankCode: [{ required: true, message: '请输入开户银行', trigger: 'change' }],

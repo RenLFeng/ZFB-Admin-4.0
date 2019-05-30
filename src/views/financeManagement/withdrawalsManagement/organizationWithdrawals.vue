@@ -11,7 +11,7 @@
               <el-input clearable v-model="organName" placeholder="请输入机构名称或机构编号"></el-input>
             </el-form-item>
             <el-form-item label="机构类型">
-              <el-select clearable placeholder="机构类型" v-model="organLevel">
+              <el-select clearable placeholder="请选择机构类型" v-model="organLevel">
                 <el-option v-for="i in getOrganLevel" :label="i.text" :value="i.id" :key="i.id"></el-option>
               </el-select>
             </el-form-item>

@@ -115,9 +115,9 @@
             </el-select>
           </el-form-item>
           <br>
-          <el-form-item label="开通快捷交易" v-if="level === levelMap.PLATFORM&&isQuickStatus">
+          <!-- <el-form-item label="开通快捷交易" v-if="level === levelMap.PLATFORM&&isQuickStatus">
             <el-switch v-model="dredgeQuick" :active-value="1" :inactive-value="0"></el-switch>
-          </el-form-item>
+          </el-form-item>-->
           <br>
           <el-form-item
             width="100%"
@@ -325,7 +325,7 @@ export default {
             posRepayFee: this.addOrganData.posRepayFee,
             quickPayFee: this.addOrganData.quickPayFee,
             quickRepayFee: this.addOrganData.quickRepayFee,
-            quickStatus: this.dredgeQuick,
+            // quickStatus: this.dredgeQuick,
             rewardId: this.organRuleData.rewardId ? this.organRuleData.rewardId : '',
             totalReward: this.organRuleData.totalReward ? this.organRuleData.totalReward : '',
             provinceAmt: this.addOrganData.provinceAmt ? this.addOrganData.provinceAmt : 0,

@@ -92,21 +92,21 @@ export const searchCondition = [
   },
   {
     type: 'input',
-    placeholder: '分公司名称或编号',
+    placeholder: '请输入名称或编号',
     label: '分公司',
     searchValue: 'proOrganName',
     level: [PLATFORM]
   },
   {
     type: 'input',
-    placeholder: '子公司名称或编号',
+    placeholder: '请输入名称或编号',
     label: '子公司',
     searchValue: 'organName',
     level: [PLATFORM, PROVINCIAL]
   },
   {
     type: 'input',
-    placeholder: '高级合伙人名称或编号',
+    placeholder: '请输入名称或编号',
     label: '高级合伙人',
     searchValue: 'secOrganName',
     level: [PLATFORM, PROVINCIAL, ORGAN]

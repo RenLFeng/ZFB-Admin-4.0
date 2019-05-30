@@ -290,13 +290,13 @@ export function createRouter() {
           //   path: '/slotOrder',
           //   component: () => import('../views/orderManagement/slotOrder.vue')
           // },
-          // {
-          // meta: {
-          // title: '测评订单'
-          // },
-          // path: '/evaluationOrder',
-          // component: () => import('../views/orderManagement/evaluationOrder.vue')
-          // },
+          {
+            meta: {
+              title: '测评订单'
+            },
+            path: '/evaluationOrder',
+            component: () => import('../views/orderManagement/evaluationOrder.vue')
+          },
           // {
           //   meta: {
           //     title: '交易订单'
@@ -406,13 +406,14 @@ export function createRouter() {
           //   path: '/receiptChannel',
           //   component: () => import('../views/channelManagement/receiptChannel.vue')
           // },
-          // {
-          //   meta: {
-          //     title: '鉴权记录'
-          //   },
-          //   path: '/authenticationRecord',
-          //   component: () => import('../views/channelManagement/authenticationRecord.vue')
-          // },
+          {
+            meta: {
+              title: '鉴权记录'
+            },
+            path: '/authenticationRecord',
+            component: () => import('../views/404/index.vue')
+            // () => import('../views/channelManagement/authenticationRecord.vue')
+          },
           {
             meta: {
               title: '通道订单'

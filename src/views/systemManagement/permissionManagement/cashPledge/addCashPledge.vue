@@ -81,9 +81,9 @@
 import { post, postJOSN } from '../../../../store/requestFacade.js'
 const feeMap = {
   2: '分公司还款分润',
-  3: '一级还款分润',
+  3: '子公司还款分润',
   5: '合伙人还款分润',
-  9: '二级还款分润'
+  9: '高级合伙人还款分润'
 }
 export default {
   name: 'add-cash-pledge',
@@ -129,8 +129,8 @@ export default {
         ],
         depositDeductPO: [
           { label: '分公司还款分润', organLevel: 2, deductPercent: null },
-          { label: '一级还款分润', organLevel: 3, deductPercent: null },
-          { label: '二级还款分润', organLevel: 9, deductPercent: null },
+          { label: '子公司还款分润', organLevel: 3, deductPercent: null },
+          { label: '高级合伙人还款分润', organLevel: 9, deductPercent: null },
           { label: '合伙人还款分润', organLevel: 5, deductPercent: null }
         ]
       },
