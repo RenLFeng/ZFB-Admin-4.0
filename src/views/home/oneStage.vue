@@ -75,7 +75,7 @@ export default {
   width: 196px;
   height: 196px;
   background-color: white;
-  margin: 37px auto 0;
+  margin: 65x auto 0;
   border-radius: 10px;
   padding: 14px 0;
   box-sizing: border-box;
@@ -100,11 +100,12 @@ p.code {
   color: #090020;
   font-weight: bold;
   font-size: 16px;
+  margin-top: -15px;
 }
 p.text {
   color: #090020;
   font-weight: bold;
-  margin-top: 53px;
+  margin-top: 38px;
   font-size: 16px;
 }
 </style>
