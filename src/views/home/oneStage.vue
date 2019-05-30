@@ -99,10 +99,12 @@ p.remmondCode {
 p.code {
   color: #090020;
   font-weight: bold;
+  font-size: 16px;
 }
 p.text {
   color: #090020;
   font-weight: bold;
-  margin-top: 25px;
+  margin-top: 53px;
+  font-size: 16px;
 }
 </style>
