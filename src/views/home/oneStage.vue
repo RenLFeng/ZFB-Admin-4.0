@@ -64,12 +64,12 @@ export default {
   width: 220px;
   height: 30px;
   line-height: 30px;
-  border-radius: 15px;
-  background-color: #5628af;
+  /* border-radius: 15px; */
+  /* background-color: #5628af; */
   font-size: 12px;
   color: white;
   text-align: center;
-  padding: 0;
+  /* padding: 0; */
 }
 .qrDiv {
   width: 196px;
@@ -94,12 +94,15 @@ p.remmondCode {
   font-size: 16px;
   background-color: #fff;
   border-radius: 16px;
-  margin: 50 /*  */ px 0 0 0;
+  margin: 50px 0 0 0;
 }
 p.code {
   color: #090020;
+  font-weight: bold;
 }
 p.text {
   color: #090020;
+  font-weight: bold;
+  margin-top: 25px;
 }
 </style>
