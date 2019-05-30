@@ -4,8 +4,8 @@
       <div class="qrDiv">
         <img :src="codeUrl" alt>
       </div>
-      <p>推荐码:{{referphone}}</p>
-      <p class="remmondCode">{{username}}邀请你加入</p>
+      <p class="code">推荐码:{{referphone}}</p>
+      <p class="text">{{username}}邀请你加入</p>
     </div>
   </div>
 </template>
@@ -95,5 +95,11 @@ p.remmondCode {
   background-color: #fff;
   border-radius: 16px;
   margin: 50 /*  */ px 0 0 0;
+}
+p.code {
+  color: #090020;
+}
+p.text {
+  color: #090020;
 }
 </style>
