@@ -1,6 +1,7 @@
 <template>
   <div>
-    <p>奖励总数：{{total}}人，推荐奖励：{{totalProfit}}元</p>
+    <p>奖励总数：{{total}}人</p>
+    <!-- <p>奖励总数：{{total}}人，推荐奖励：{{totalProfit}}元</p> -->
     <el-table border :data="referraltableData" style="width: 100%" size="small">
       <el-table-column v-for="v in referralTitle" :prop="v.prop" :label="v.title" :key="v.label"></el-table-column>
     </el-table>

@@ -46,11 +46,11 @@ export const TableTitle = [
     prop: 'vipProfit',
     level: [PLATFORM, PROVINCIAL, ORGAN, SECONDORGAN]
   },
-  {
-    title: '推荐奖励(元)',
-    prop: 'recommendedReward',
-    level: [PLATFORM, PROVINCIAL, ORGAN, SECONDORGAN]
-  },
+  // {
+  //   title: '推荐奖励(元)',
+  //   prop: 'recommendedReward',
+  //   level: [PLATFORM, PROVINCIAL, ORGAN, SECONDORGAN]
+  // },
   {
     title: '机构月结分润(元)',
     prop: 'monthProfit',

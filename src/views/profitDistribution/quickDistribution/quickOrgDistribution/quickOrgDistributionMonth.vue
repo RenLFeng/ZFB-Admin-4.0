@@ -12,7 +12,7 @@
       </p>
       <p class="total">
         <span>VIP总分润：{{totalVipProfit|normAmount}}元</span>&nbsp;
-        <span>推荐奖励：{{totalRecommendedReward|normAmount}}元</span>&nbsp;
+        <!-- <span>推荐奖励：{{totalRecommendedReward|normAmount}}元</span>&nbsp; -->
       </p>
       <el-form :inline="true" class="demo-form-inline">
         <el-form-item>

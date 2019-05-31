@@ -42,11 +42,11 @@ export const TableTitle = [
     prop: 'vipProfit',
     level: [PLATFORM, PROVINCIAL, ORGAN, SECONDORGAN]
   },
-  {
-    title: '推荐奖励(元)',
-    prop: 'recommendedReward',
-    level: [PLATFORM, PROVINCIAL, ORGAN, SECONDORGAN]
-  },
+  // {
+  //   title: '推荐奖励(元)',
+  //   prop: 'recommendedReward',
+  //   level: [PLATFORM, PROVINCIAL, ORGAN, SECONDORGAN]
+  // },
   {
     title: '分公司月结分润(元)',
     prop: 'monthProfit',
@@ -158,15 +158,15 @@ export const referralTitle = [
   {
     title: '用户',
     props: 'userName'
-  },
+  }
   {
     title: '推荐人',
     props: 'inviteName'
-  },
-  {
-    title: '推荐奖励(元)',
-    props: 'profit'
   }
+  // {
+  //   title: '推荐奖励(元)',
+  //   props: 'profit'
+  // }
 ]
 export const referralParseRoleList = arr => {
   if (!arr.length) {

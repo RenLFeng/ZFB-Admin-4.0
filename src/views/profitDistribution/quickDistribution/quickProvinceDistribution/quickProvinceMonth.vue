@@ -11,7 +11,7 @@
         <span>合伙人总分润：{{totalPartnerProfit|normAmount}}元</span>&nbsp;
         <br>
         <span>VIP总分润：{{totalVipProfit|normAmount}}元</span>&nbsp;
-        <span>推荐奖励：{{totalRecommendedReward|normAmount}}元</span>&nbsp;
+        <!-- <span>推荐奖励：{{totalRecommendedReward|normAmount}}元</span>&nbsp; -->
       </p>
       <el-form :inline="true" class="demo-form-inline">
         <el-form-item>

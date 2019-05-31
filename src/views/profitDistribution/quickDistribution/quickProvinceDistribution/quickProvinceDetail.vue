@@ -12,12 +12,12 @@
         <el-tab-pane label="VIP总分润" name="third">
           <profit-table :profitType="profitType" :provinceDetailData="provinceDetailData" :type="6"></profit-table>
         </el-tab-pane>
-        <el-tab-pane label="推荐奖励" name="fourth" v-if="profitType === 1">
+        <!-- <el-tab-pane label="推荐奖励" name="fourth" v-if="profitType === 1">
           <referral-table
             :date="provinceDetailData.settleTimeText"
             :organId="provinceDetailData.organId"
           ></referral-table>
-        </el-tab-pane>
+        </el-tab-pane>-->
       </el-tabs>
     </el-dialog>
   </div>

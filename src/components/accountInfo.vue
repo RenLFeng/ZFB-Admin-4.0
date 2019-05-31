@@ -33,9 +33,10 @@
             <el-form-item v-if="aboutDev" label="激活奖励">
               <span>总共{{profitAllData.activationTimes}}个商户激活，总收益{{profitAllData.activateRevenue|normAmount}}元</span>
             </el-form-item>
-            <el-form-item v-if="type === typeMap.USERS" label="推荐奖励">
+            <!-- <el-form-item v-if="type === typeMap.USERS" label="推荐奖励">
               <span>总共{{profitAllData.onlineInviteCount?profitAllData.onlineInviteCount: 0}}个用户认证，总收益{{profitAllData.onlineInviteAmt|normAmount}}元</span>
-            </el-form-item>
+            </el-form-item>-->
+
             <el-form-item label="开通合伙人奖励" v-if="type !== typeMap.USERS||isPartner">
               <span>总共{{openParnterData.openPartnerCount}}个商户开通合伙人，总收益{{openParnterData.openPartnerAmt|normAmount}}元</span>
             </el-form-item>
@@ -172,14 +173,14 @@
           </span>
           <el-button size="mini" type="warning" @click="upgrade(3)" class="btn">收益明细</el-button>
         </el-row>
-        <el-row class="Options" v-if="type === typeMap.USERS">
+        <!-- <el-row class="Options" v-if="type === typeMap.USERS">
           <el-col :span="10">
             <el-form-item label="推荐奖励">
               <span>{{monthProfitData.onlineInviteCount}}个用户完成累计10000元还款,收益{{monthProfitData.onlineInviteAmt|normAmount}}元</span>
             </el-form-item>
           </el-col>
           <el-button size="mini" type="warning" @click="recommend" class="btn">收益明细</el-button>
-        </el-row>
+        </el-row>-->
 
         <el-row class="Options" v-if="type !== typeMap.USERS||isPartner">
           <el-col :span="10">

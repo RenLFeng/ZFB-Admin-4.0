@@ -1,11 +1,14 @@
 <template>
   <div class="qrCodeCon">
-    <div class="qrCodeBox">
-      <div class="qrDiv">
-        <img :src="codeUrl" alt>
+    <div class="inner">
+      <img src="../../assets/img/qrcode_inner_bg.png" alt>
+      <div class="info">
+        <div class="block">
+          <img :src="codeUrl" alt class="codeImg">
+          <p class="code">推荐码:{{referphone}}</p>
+        </div>
+        <p class="text">{{username}}邀请你加入</p>
       </div>
-      <p class="code">推荐码:{{referphone}}</p>
-      <p class="text">{{username}}邀请你加入</p>
     </div>
   </div>
 </template>
@@ -46,66 +49,61 @@ export default {
 
 <style lang="css" scoped>
 .qrCodeCon {
-  position: relative;
-  width: 1800px;
-  height: 840px;
+  /* position: relative; */
   background: url('../../assets/img/qrBg.jpg') center no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.qrCodeBox {
+.inner {
+  width: 800px;
+  height: auto;
+  position: relative;
+}
+.inner img {
+  width: 800px;
+  height: auto;
+}
+.info {
   position: absolute;
-  top: 316px;
-  right: 516px;
-  width: 216px;
-  height: 295rem;
+  width: 160px;
+  overflow-x: hidden;
+  right: 144px;
+  bottom: 106px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.qrCodeBox > p {
-  width: 220px;
-  height: 30px;
-  line-height: 30px;
-  /* border-radius: 15px; */
-  /* background-color: #5628af; */
-  font-size: 12px;
-  color: white;
-  text-align: center;
-  /* padding: 0; */
+.info img {
+  width: 120px;
+  height: 120px;
 }
-.qrDiv {
-  width: 196px;
-  height: 196px;
-  background-color: white;
-  margin: 65px auto 0;
-  border-radius: 10px;
-  padding: 14px 0;
+
+.info .block {
+  width: 100%;
+  padding: 10px;
   box-sizing: border-box;
-}
-.qrDiv > img {
-  display: block;
-  margin: 0 auto;
-  width: 168px;
-  height: 168px;
-}
-p.remmondCode {
-  width: 216px;
-  height: 35px;
-  line-height: 35px;
-  color: #5f30bc;
-  font-size: 16px;
+  border-radius: 10px;
   background-color: #fff;
-  border-radius: 16px;
-  margin: 50px 0 0 0;
-}
-p.code {
-  color: #090020;
-  font-weight: bold;
-  font-size: 16px;
-  margin-top: -15px;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #2d86c7;
 }
 p.text {
+  width: 100%;
+  padding: 4px;
+  box-sizing: border-box;
+  border-radius: 1000px;
+  text-align: center;
+  margin-top: 15px;
   color: #090020;
-  font-weight: bold;
-  margin-top: 38px;
-  font-size: 16px;
+  background-color: #fff;
+  font-size: 14px;
 }
 </style>
