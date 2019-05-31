@@ -158,7 +158,7 @@ export const referralTitle = [
   {
     title: '用户',
     props: 'userName'
-  }
+  },
   {
     title: '推荐人',
     props: 'inviteName'
