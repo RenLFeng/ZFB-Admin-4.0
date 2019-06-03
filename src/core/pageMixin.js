@@ -80,12 +80,12 @@ export const pageMixin = {
           url: this.getUrl(),
           data: requestData
         })
-        // this.$message.success('数据加载完成')
-        this.$notify({
-          title: `数据地址 ${this.getUrl()}:`,
-          message: JSON.stringify(data, null, 0),
-          duration: 5000
-        })
+        this.$message.success('数据加载完成')
+        // this.$notify({
+        //   title: `数据地址 ${this.getUrl()}:`,
+        //   message: JSON.stringify(data, null, 0),
+        //   duration: 5000
+        // })
         const data2 = {
           total: 0,
           merchantCount: 0,
