@@ -28,7 +28,7 @@
       </el-row>
     </section>
     <section>
-      <el-table :data="dealData" style="width: 100%" border @expand-change="getCurrentRow">
+      <el-table :data="dealData" class="modify" border>
         <el-table-column type="expand">
           <template slot-scope="props">
             <div class="tableExpandLayout" style="text-align:left">
@@ -50,7 +50,6 @@
                     </el-form-item>
                   </div>
                 </div>
-
                 <h4>
                   激活奖励
                   <span style="font-size:14px">(用户激活当日起，给予直属上两级合伙人奖励金)</span>
@@ -65,10 +64,9 @@
                   <span>{{ props.row.activityRewardAmount }} 元</span>
                 </el-form-item>
                 <h4>
-                  订单返现
+                  订单返现1111
                   <span style="font-size:14px">(订单返给直属机构的设备款)</span>
                 </h4>
-
                 <el-form-item label="直属机构">
                   <span>{{ props.row.orderCashBackAmount }} 元</span>
                 </el-form-item>
@@ -235,7 +233,7 @@ export default {
     openClose() {
       this.isOpen = false
     },
-    getCurrentRow(row, expandedRows) {},
+    // getCurrentRow(row, expandedRows) {},
     // 开启活动
     async toOpen() {
       if (this.unopen.length === 0) {
@@ -439,5 +437,10 @@ export default {
 </style>
 <style scoped lang ='scss' >
 @import './index.scss';
+.modify {
+  &::before {
+    opacity: 0;
+  }
+}
 </style>
 
