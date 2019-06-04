@@ -98,7 +98,7 @@ export function createRouter() {
           },
           {
             meta: {
-              title: '库存批次'
+              title: '库存记录'
             },
             path: '/inventoryLot',
             component: () => import('../views/deviceManagement/inventoryLot.vue')

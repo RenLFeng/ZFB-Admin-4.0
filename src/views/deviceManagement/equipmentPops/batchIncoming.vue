@@ -56,7 +56,7 @@
       <div class="instructions">
         <h3>说明</h3>
         <p>为了降低人工入库出错的概率，每次入库都会生成批次，对每个设备编号进行检查是否异常</p>
-        <p>先点击【生成批次】系统开始自动检查,此时设备并未真正入库,需进入【库存批次】查看检查结果管理员仔细检查入库信息是否有误.有误就操作【确定取消】;确认无误就操作【确定入库】</p>
+        <p>先点击【生成批次】系统开始自动检查,此时设备并未真正入库,需进入【库存记录】查看检查结果管理员仔细检查入库信息是否有误.有误就操作【确定取消】;确认无误就操作【确定入库】</p>
       </div>
       <span slot="footer" class="dialog-footer">
         <el-button @click="cancel">取 消</el-button>
@@ -166,7 +166,7 @@ export default {
           this.$confirm(
             `您共需要入库${this.batchData.endNo -
               this.batchData.startNo +
-              1}个设备,请稍等片刻后在【库存批次】中查看入库结果`,
+              1}个设备,请稍等片刻后在【库存记录】中查看入库结果`,
             res.data,
             {
               type: 'success',

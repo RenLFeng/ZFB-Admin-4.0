@@ -3,7 +3,7 @@
     <div class="deviceHead">
       <el-breadcrumb separator-class="el-icon-arrow-right">
         <el-breadcrumb-item>设备管理</el-breadcrumb-item>
-        <el-breadcrumb-item>库存批次</el-breadcrumb-item>
+        <el-breadcrumb-item>库存记录</el-breadcrumb-item>
       </el-breadcrumb>
     </div>
     <div class="screenBatch">
@@ -22,7 +22,7 @@
           <el-input v-model="searchData.devNo" clearable placeholder="设备编号"></el-input>
         </el-form-item>
         <el-form-item>
-          <el-input v-model="searchData.batchNO" clearable placeholder="库存批次"></el-input>
+          <el-input v-model="searchData.batchNO" clearable placeholder="库存记录"></el-input>
         </el-form-item>
         <el-form-item>
           <el-button type="primary" @click="handleSearch">搜索</el-button>

@@ -130,7 +130,7 @@ export default {
         // console.log(res)
         this.$emit('renewal')
         this.$confirm(
-          `您共需要入库${this.outputs.length}个设备，请稍等片刻后在【库存批次】中查看入库结果`,
+          `您共需要入库${this.outputs.length}个设备，请稍等片刻后在【库存记录】中查看入库结果`,
           `生成批次${res.msg}`,
           {
             type: 'success',
@@ -161,7 +161,7 @@ export default {
         this.$confirm(
           `您将要下发${this.outputs.length}个设备给【${
             this.organName
-          }】，请稍等片刻后在【库存批次】中查看下发结果`,
+          }】，请稍等片刻后在【库存记录】中查看下发结果`,
           `生成批次${res.msg}`,
           {
             type: 'success',
