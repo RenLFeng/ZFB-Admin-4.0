@@ -272,6 +272,7 @@ export default {
         console.log(error)
       }
     },
+    // getOrganTypeFee
     async getOrganRule() {
       try {
         const res = await post({
@@ -376,6 +377,7 @@ export default {
         })
         this.getOrganTypeFeeData = res.data
         this.obj = handleOrganObj(handleOrganArr(res.data))
+        console.log('this.obj: ', this.obj)
       } catch (error) {
         console.log(error)
       }

@@ -16,9 +16,9 @@ export const handleOrganArr = arr =>
   arr.map(v => ({
     ...v,
     posPayFeeList: calcfeeOptionsList(v.posPayFee.maxFee, v.posPayFee.minFee),
-    posRepayFeeList: calcfeeOptionsList(v.posRepayFee.maxFee, v.posRepayFee.minFee),
-    quickPayFeeList: calcfeeOptionsList(v.quickPayFee.maxFee, v.quickPayFee.minFee),
-    quickRepayFeeList: calcfeeOptionsList(v.quickRepayFee.maxFee, v.quickRepayFee.minFee)
+    posRepayFeeList: calcfeeOptionsList(v.posRepayFee.maxFee, v.posRepayFee.minFee)
+    // quickPayFeeList: calcfeeOptionsList(v.quickPayFee.maxFee, v.quickPayFee.minFee),
+    // quickRepayFeeList: calcfeeOptionsList(v.quickRepayFee.maxFee, v.quickRepayFee.minFee)
   }))
 
 export const handleOrganObj = arr =>
