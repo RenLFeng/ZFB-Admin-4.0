@@ -64,7 +64,7 @@
                   <span>{{ props.row.activityRewardAmount }} 元</span>
                 </el-form-item>
                 <h4>
-                  订单返现1111
+                  订单返现
                   <span style="font-size:14px">(订单返给直属机构的设备款)</span>
                 </h4>
                 <el-form-item label="直属机构">
