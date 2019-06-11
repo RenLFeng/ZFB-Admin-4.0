@@ -22,7 +22,7 @@
           <el-input v-model="searchData.devNo" clearable placeholder="设备编号"></el-input>
         </el-form-item>
         <el-form-item>
-          <el-input v-model="searchData.batchNO" clearable placeholder="库存记录"></el-input>
+          <el-input v-model="searchData.batchNO" clearable placeholder="库存批次"></el-input>
         </el-form-item>
         <el-form-item>
           <el-button type="primary" @click="handleSearch">搜索</el-button>
@@ -162,7 +162,6 @@ export default {
     },
     // 切换是否「参与分润」状态
     async toggleProfitStatus(item) {
-      console.log(item)
       const body = {
         patchNo: item.batchNo,
         profitStatus: Number(item.profitStatus) === 0 ? 1 : 0
