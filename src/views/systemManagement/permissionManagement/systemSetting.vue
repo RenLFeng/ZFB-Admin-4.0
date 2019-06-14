@@ -56,6 +56,9 @@ export default {
       sanzhongServerTel: ''
     }
   },
+  created(){
+    this.getPhoneFn();
+  },
   methods: {
     addCashPledge(row) {
       this.cashPledgedetail = row
@@ -63,6 +66,23 @@ export default {
     },
     goBack() {
       this.addCashPledgeShow = 1
+    },
+    // get 客服电话
+     async getPhoneFn() {
+      const api = 'routineConfig/getPhone'
+      try {
+        const res = await post({
+          url: api,
+          data: {
+       
+          }
+        })
+        if (res.msg === '成功') {
+           this.sanzhongServerTel=res.data;
+        }
+      } catch (error) {
+        console.log(error)
+      }
     },
     async updateServerTel() {
       const api = 'routineConfig/config'

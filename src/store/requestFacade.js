@@ -3,7 +3,7 @@ import storageKeys from './storageKeys'
 
 let baseURL='http://test-admin.sanzhongzhixiang.com';
 
-//  baseURL='http://192.168.0.24:8080';
+ baseURL='http://192.168.0.24:8080';
 
 const CODE = {
   SUCCESS: '200',
@@ -70,8 +70,8 @@ const handlers = [
 export const post = ({ url, data }) =>
   new Promise((resolve, reject) => {
     data = data || {}
-    // let prefix = process.env.VUE_APP_HOST || `${config.protocol}://${config.host}:${config.port}`
-    let prefix = baseURL
+    let prefix = process.env.VUE_APP_HOST || baseURL
+    // let prefix = baseURL
     url = [prefix, url].join('/')
     let client = new XMLHttpRequest()
     client.open('POST', url, true)
@@ -98,8 +98,8 @@ export const post = ({ url, data }) =>
 export const postWithFile = ({ url, data, fileForm }) =>
   new Promise((resolve, reject) => {
     data = data || {}
-    // let prefix = process.env.VUE_APP_HOST || `${config.protocol}://${config.host}:${config.port}`
-    let prefix = baseURL
+    let prefix = process.env.VUE_APP_HOST || baseURL
+    // let prefix = baseURL
     url = [prefix, url].join('/')
     const formData = new FormData()
     Object.keys(fileForm).forEach(key => {
@@ -127,8 +127,8 @@ export const postWithFile = ({ url, data, fileForm }) =>
 export const postJOSN = ({ url, data }) =>
   new Promise((resolve, reject) => {
     data = data || {}
-    // let prefix = process.env.VUE_APP_HOST || `${config.protocol}://${config.host}:${config.port}`
-    let prefix = baseURL
+    let prefix = process.env.VUE_APP_HOST || baseURL
+    // let prefix = baseURL
     url = [prefix, url].join('/')
     let client = new XMLHttpRequest()
     client.open('POST', url, true)

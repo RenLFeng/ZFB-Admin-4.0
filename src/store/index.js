@@ -22,7 +22,7 @@ export function createStore() {
       [stateKeys.TAGS]: [],
       [stateKeys.CURRENT_TAG]: null,
       [stateKeys.MENUS]: [],
-      test: 1
+      test: 1,
     },
     mutations: {
       [mutationKeys.SET_MENU_VISIBILITY]: (state, visible) => {

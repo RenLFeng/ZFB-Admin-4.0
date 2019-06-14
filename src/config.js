@@ -1,9 +1,5 @@
 export default {
-  // host: '192.168.0.24',
-  // port: 8080,
-  // protocol: 'http'
-
-  // host: 'test-admin.sanzhongzhixiang.com',
-  // port: '80',
-  // protocol: 'http'
+   host: '192.168.1.143',
+  port: 10086,
+  protocol: 'http'
 }
