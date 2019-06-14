@@ -32,7 +32,7 @@
           <el-form label-position="left" inline>
             <el-row class="expand" :gutter="20">
               <el-col :span="12" style="textAlign:left">
-                <el-tag>押金阶段</el-tag>
+                <el-tag>活动阶段</el-tag>
                 <div v-for="(v,i) in props.row.depositStagePO" :key="i">
                   <el-form-item :label="'累计还款阶段'+(i+1)">
                     <span>{{v.totalTradeAmt}}</span>
@@ -43,13 +43,13 @@
                 </div>
               </el-col>
               <el-col :span="4" style="textAlign:left">
-                <el-tag>押金分润扣除规则</el-tag>
+                <el-tag>活动分润扣除规则</el-tag>
                 <br>
-                <el-form-item label="押金分润扣除总额" prop="feeSum">
+                <el-form-item label="活动分润扣除总额" prop="feeSum">
                   <span>万{{props.row.feeSum}}</span>
                 </el-form-item>
                 <br>
-                <el-tag>押金分润扣除分配规则</el-tag>
+                <el-tag>活动分润扣除分配规则</el-tag>
                 <br>
                 <el-form-item
                   v-for="(v,i) in props.row.depositDeductPO"
