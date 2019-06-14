@@ -99,7 +99,7 @@ export default {
     if (process.env.NODE_ENV !== 'production') {
       const level = Number(getDataFormlocalStorage('level'))
       const levelName =
-        level === 1 ? '平台' : level === 2 ? '分公司' : level === 3 ? '一级' : '二级'
+        level === 1 ? '平台' : level === 2 ? '分公司' : level === 3 ? '子公司' : '高级合伙人'
       this.headTitle = `智付宝管理平台【${process.env.NODE_ENV}】【${
         process.env.VUE_APP_HOST
       }】【 ${levelName} 】`

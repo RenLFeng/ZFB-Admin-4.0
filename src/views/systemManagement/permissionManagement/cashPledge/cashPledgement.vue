@@ -99,9 +99,9 @@ import openActivity from './openActivity'
 
 const feeMap = {
   2: '分公司还款分润',
-  3: '一级还款分润',
+  3: '子公司还款分润',
   5: '合伙人还款分润',
-  9: '二级还款分润'
+  9: '高级合伙人还款分润'
 }
 export default {
   name: 'cash-pledge',

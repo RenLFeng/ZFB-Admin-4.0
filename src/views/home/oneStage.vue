@@ -25,6 +25,9 @@ export default {
       username: ''
     }
   },
+  mounted(){
+    // this.getInviteInfo();
+  },
   methods: {
     async getInviteInfo() {
       try {
