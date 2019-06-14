@@ -33,7 +33,7 @@
           <el-col>
             <div class="grid-content bg-purple-light">
               <div class="logoBox">
-                <img class="logoPic" @click="clickLogo($event)" :src="currentBank.bankLogo">
+                <img :class="[{ 'active': currentBank.isUpload }, 'logoPic']" @click="clickLogo($event)" :src="currentBank.bankLogo">
                 <input type="file" class="hidden_file_input" @change="getlogo($event)">
               </div>
             </div>
@@ -65,6 +65,7 @@ export default {
         btCode: '',
         bankId: '',
         bankLogo: '',
+        isUpload:false,
         btName: '',
         isUse: 1,
         offline: 0
@@ -106,6 +107,7 @@ export default {
       e.currentTarget.nextElementSibling.click()
     },
     getlogo(e) {
+      console.log(e);
       const [logoPic] = e.currentTarget.files
       this.logoPic = logoPic
     },
@@ -164,7 +166,8 @@ export default {
   watch: {
     async logoPic(newVal, oldVal) {
       console.log(img.readFile(newVal))
-      this.currentBank.bankLogo = await img.readFile(newVal)
+      this.currentBank.bankLogo = await img.readFile(newVal);
+      this.currentBank.isUpload=true;
     }
   },
   mounted() {
@@ -177,6 +180,7 @@ export default {
         this.$set(this.currentBank, key, value)
       })
       this.title = '编辑'
+      this.currentBank.isUpload=true;
     }
   }
 }
@@ -197,6 +201,9 @@ export default {
 }
 img[src=''] {
   opacity: 0;
+}
+img.active[src][data-v-6d4e6bc4]{
+  opacity: 1;
 }
 .hidden_file_input {
   display: none;

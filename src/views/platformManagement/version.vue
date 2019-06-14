@@ -120,6 +120,8 @@
 </template>
 
 <script>
+const hostname = window && window.location && window.location.hostname;
+console.log(hostname);
 import { queryPermission } from '@/util'
 import createVersion from './createVersion'
 import { mixins } from '@/core'

@@ -80,10 +80,11 @@
         <el-input type="textarea" v-model="currentVer.newContent" max="140"></el-input>
       </el-form-item>
       <el-form-item label="下载链接" label-width="80px" prop="downloadLinks">
-        <el-input v-model="currentVer.downloadLinks"></el-input>
+          <el-input v-if="!currentVer.downloadLinks2" v-model="currentVer.downloadLinks"></el-input>
+          <el-input v-if="currentVer.downloadLinks2" v-model="currentVer.downloadLinks2"></el-input>
       </el-form-item>
       <el-form-item label="储存链接" label-width="80px">
-        <el-input :placeholder="currentVer.storageLinks" :disabled="true">.</el-input>
+        <el-input :placeholder="currentVer.storageLinks?currentVer.storageLinks:currentVer.downloadLinks" :disabled="true">.</el-input>
       </el-form-item>
     </el-form>
     <div class="upload_area">
@@ -134,7 +135,8 @@ export default {
         versionName: '',
         versionNumber: '',
         newContent: '',
-        downloadLinks: 'https://fir.im/yxj1',
+        downloadLinks: 'https://dibaqu.com/SZZX',
+        downloadLinks2: '',
         updateType: '0',
         posCardSlotNum: '4',
         storageLinks: '',
@@ -179,13 +181,19 @@ export default {
       return isEquipment(number)
     },
     handleZIPsuccess(res, file) {
-      this.currentVer.storageLinks = res.data
+       this.currentVer.storageLinks = res.data
+      if(this.currentVer.sysTemType!=1){
+        this.currentVer.downloadLinks2= res.data
+      }
       this.$message.success(`${file.name}文件上传成功`)
     },
     handleRadioClick(id) {
       console.log('id: ', id)
       this.$refs.upload.clearFiles()
       this.currentVer.sysTemType = id
+       this.currentVer.storageLinks = 'https://dibaqu.com/SZZX'
+      this.currentVer.downloadLinks= 'https://dibaqu.com/SZZX'
+       this.currentVer.downloadLinks2= ''
     },
     handleZIPSfailed(res) {
       this.$message.error(`${res.msg}`)
