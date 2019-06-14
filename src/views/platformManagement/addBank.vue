@@ -202,7 +202,7 @@ export default {
 img[src=''] {
   opacity: 0;
 }
-img.active[src][data-v-6d4e6bc4]{
+img.active.logoPic{
   opacity: 1;
 }
 .hidden_file_input {
