@@ -162,7 +162,7 @@
           </el-col>
           <el-button size="mini" type="warning" @click="upgrade(2)" class="btn">收益明细</el-button>
         </el-row>
-        <el-row class="Options" v-if="type !== typeMap.USERS&&accountinfo.organLevel !== 9">
+        <!-- <el-row class="Options" v-if="type !== typeMap.USERS&&accountinfo.organLevel !== 9">
           <el-col :span="10">
             <el-form-item label="返现奖励">
               <span>{{monthProfitData.cashTimes}}个商户激活,收益{{monthProfitData.cashReward|normAmount}}元</span>
@@ -172,7 +172,7 @@
             <i class="el-icon-info" style="width:30px"></i> 只有【YXJ-002】型号的设备激活享受返现奖励
           </span>
           <el-button size="mini" type="warning" @click="upgrade(3)" class="btn">收益明细</el-button>
-        </el-row>
+        </el-row> -->
         <!-- <el-row class="Options" v-if="type === typeMap.USERS">
           <el-col :span="10">
             <el-form-item label="推荐奖励">

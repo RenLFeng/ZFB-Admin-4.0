@@ -14,7 +14,7 @@ export function createRouter() {
       {
         path: '/',
         component: () => import('../views/Container.vue'),
-        meta: { title: '三众平台管理后台' },
+        meta: { title: '智付宝台管理后台' },
         children: [
           platform,
           provincialLevel,
