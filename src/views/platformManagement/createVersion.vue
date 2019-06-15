@@ -1,5 +1,5 @@
 <template>
-  <el-dialog :title="title" :visible="true" :before-close="versionHide">
+  <el-dialog :title="title" :visible="true" :before-close="versionHide" :close-on-click-modal='false'>
     <el-form :model="currentVer" :rules="rules" ref="verForm">
       <!-- 系统类型 -->
       <el-form-item label="系统类型" prop="sysTemType">
@@ -184,6 +184,7 @@ export default {
        this.currentVer.storageLinks = res.data
       if(this.currentVer.sysTemType!=1){
         this.currentVer.downloadLinks2= res.data
+         this.currentVer.downloadLinks=res.data
       }
       this.$message.success(`${file.name}文件上传成功`)
     },

@@ -19,12 +19,12 @@
             <!-- <el-form-item label="快捷收款分润">
               <span>总共{{profitAllData.monthCollectionProfitCountVip?profitAllData.monthCollectionProfitCountVip:0}}个月，收款总分润{{profitAllData.monthCollectionProfitVip|normAmount}}元</span>
             </el-form-item>-->
-            <el-form-item
+            <!-- <el-form-item
               v-if="type !== typeMap.USERS&&accountinfo.organLevel !== Number(levelMap.SECONDORGAN)"
               label="返现奖励"
             >
               <span>总共{{profitAllData.cashTimes}}个商户激活，总收益{{profitAllData.cashReward|normAmount}}元</span>
-            </el-form-item>
+            </el-form-item> -->
           </el-col>
           <el-col :span="10">
             <el-form-item v-if="aboutDev" label="平台购机">
