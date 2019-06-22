@@ -221,10 +221,10 @@ export default {
     // 添加版本
     async addVer() {
       try {
-        if (!this.currentVer.storageLinks) {
-          this.$message.error(`没有上传【 ${this.systemTypeName} 安装包 】文件`)
-          return
-        }
+        // if (!this.currentVer.storageLinks) {
+        //   this.$message.error(`没有上传【 ${this.systemTypeName} 安装包 】文件`)
+        //   return
+        // }
         const body = {
           sysTemType: this.currentVer.sysTemType, // 系统类型（1 1-ios，2-安卓，3-设备
           versionName: this.currentVer.versionName, // 版本名称

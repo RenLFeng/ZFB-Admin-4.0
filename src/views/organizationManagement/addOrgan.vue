@@ -142,7 +142,7 @@
             </el-select>
           </el-form-item>
         </el-col>
-        <el-col :span="6" v-if="organRuleData.isOpen === 1">
+        <!-- <el-col :span="6" v-if="organRuleData.isOpen === 1">
           <p>
             <el-tag>开通合伙人奖励分配规则</el-tag>
             <el-form-item label="奖励总金额">{{organRuleData.totalReward}}元</el-form-item>
@@ -161,7 +161,7 @@
           <br>
           <el-form-item label="直接合伙人">{{organRuleData.directAmt}}元</el-form-item>
           <el-form-item label="间接合伙人">{{organRuleData.indirectAmt}}元</el-form-item>
-        </el-col>
+        </el-col> -->
       </el-row>
     </el-form>
   </div>

@@ -40,12 +40,12 @@ export const TableTitle = [
     prop: 'afterProfit',
     level: [PLATFORM, PROVINCIAL]
   },
-  {
-    title: '活动扣除分润(元)',
-    prop: 'depositProfit',
-    level: [PLATFORM, PROVINCIAL],
-    type: 'REPAY'
-  },
+  // {
+  //   title: '活动扣除分润(元)',
+  //   prop: 'depositProfit',
+  //   level: [PLATFORM, PROVINCIAL],
+  //   type: 'REPAY'
+  // },
   {
     title: '结算状态',
     prop: 'proStatus',

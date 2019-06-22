@@ -10,13 +10,13 @@
         <el-table-column property="tradeAmt" label="本月交易量(元)">
           <template slot-scope="scope">{{scope.row.performance|normAmount}}</template>
         </el-table-column>
-        <el-table-column
+        <!-- <el-table-column
           property="provinceAmt"
           label="活动扣除分润(元)"
           v-if="dealType===dealTypeMap.REPAY"
         >
           <template slot-scope="scope">{{scope.row.depositProfit|normAmount}}</template>
-        </el-table-column>
+        </el-table-column> -->
         <el-table-column property="provinceAmt" label="分公司月结分润(元)">
           <template slot-scope="scope">{{scope.row.profit|normAmount}}</template>
         </el-table-column>

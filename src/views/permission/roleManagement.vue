@@ -96,6 +96,8 @@ export default {
     const branch = arr =>
       [].concat(...arr.map(v => v.children.length && [v.id, ...branch(v.children)])).filter(Boolean)
     this.NotOperationList = branch(this.vaildPermission)
+    
+
   },
   methods: {
     accessBranch() {
@@ -117,6 +119,7 @@ export default {
         url: getRoleList,
         data: {}
       }).then(res => {
+
         this.tableData = ParseRoleList(res.data.rows).sort((a, b) => {
           return a.id >= b.id ? 1 : -1
         })

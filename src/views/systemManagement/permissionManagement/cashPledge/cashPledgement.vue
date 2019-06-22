@@ -21,7 +21,8 @@
         v-if="enableRuleName"
         @click="open('toggle')"
       >切换活动</el-button>
-      <el-button type="danger" plain size="small" v-if="enableRuleName" @click="close">关闭活动</el-button>
+      <el-button type="danger" plain size="small"  @click="close">关闭活动</el-button>
+        <!-- <el-button type="danger" plain size="small" v-if="enableRuleName" @click="close">关闭活动</el-button> -->
       <div class="operation">
         <el-button type="primary" plain icon="el-icon-plus" size="small" @click="addCashPledge">活动规则</el-button>
       </div>
@@ -157,6 +158,7 @@ export default {
         this.cashPledgeData = ParseRoleList(res.data.rows)
         this.enableRuleName = res.data.enableRuleName
         this.enableRuleNameId = res.data.enableRuleNameId
+         this.$emit('closeActivity',{show:this.enableRuleName,close:'start'})
       } catch (error) {}
     },
     open(type) {
@@ -186,6 +188,8 @@ export default {
           }
         })
         this.$message.success(res.data)
+        this.showCandepositConfig=false;
+        this.$emit('closeActivity',{show:this.enableRuleName,close:'close'})
         this.getDepositPosAll()
       } catch (error) {
         console.log(error)

@@ -259,7 +259,7 @@
             </el-row>
           </div>
         </el-col>
-        <el-col :span="5" v-if="editOrganData.isOpen === 1">
+        <!-- <el-col :span="5" v-if="editOrganData.isOpen === 1">
           <el-tag style="margin-bottom:10px">开通合伙人奖励分配规则</el-tag>
           <br>
           <el-form-item label="分公司" prop="provinceAmt" v-if="editOrganData.organType === 2">
@@ -273,7 +273,7 @@
           </el-form-item>
           <el-form-item label="直属合伙人">{{editOrganData.directAmt}}元</el-form-item>
           <el-form-item label="间接合伙人">{{editOrganData.indirectAmt}}元</el-form-item>
-        </el-col>
+        </el-col> -->
       </el-row>
     </el-form>
     <div class="account">

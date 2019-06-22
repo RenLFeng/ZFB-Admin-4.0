@@ -1,12 +1,12 @@
 import { CurrentUserPermission } from '../../../public/constant/const'
 import { pipe, getDataFormlocalStorage } from '../../../util'
-
 const parse = obj => {
   // extendAble
   return {
     ...obj,
     label: obj.name || '',
-    children: (obj.subMenuItems && parseTree(obj.subMenuItems)) || []
+    children: (obj.subMenuItems && parseTree(obj.subMenuItems)) || [],
+    aaaa:obj.name
   }
 }
 
@@ -18,6 +18,8 @@ const filterInVaildArr = arr => arr.filter(v => !InVaildList.includes(v.name))
 const filterInvaildExtendAble = arr => arr.filter(v => v.extendAble)
 
 const childrenTypeIsIncludeOperation = arr => arr.map(v => v.type).includes(3) // 3 ===operation
+
+
 
 const accessChildrenTypeList = obj => {
   return obj.children && obj.children.length
@@ -45,6 +47,9 @@ export const map = pipe([
   filterInvaildExtendAble
   // setChildrenTypeList
 ])(getDataFormlocalStorage(CurrentUserPermission))
+
+console.log('00000',map);
+
 
 const branch = arr =>
   arr.reduce(

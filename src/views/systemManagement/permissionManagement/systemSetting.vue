@@ -17,14 +17,24 @@
       <el-tab-pane label="分润配置" name="systemFee">
         <sysem-fee></sysem-fee>
       </el-tab-pane>
-      <el-tab-pane label="活动配置" name="cashPledge" v-if="candepositConfig">
-        <cash-pledge @addCashPledge="addCashPledge" v-if="addCashPledgeShow===1"></cash-pledge>
+      <el-tab-pane label="活动配置" name="cashPledge" v-if="candepositConfig && showCandepositConfig && !close">
+        <cash-pledge @addCashPledge="addCashPledge" v-if="addCashPledgeShow===1" @closeActivity="showCandepositConfigFn"></cash-pledge>
         <add-cash-pledge
           @goBack="goBack"
           v-if="addCashPledgeShow===2"
           :cashPledgedetail="cashPledgedetail"
         ></add-cash-pledge>
       </el-tab-pane>
+
+
+      <cash-pledge @addCashPledge="addCashPledge" v-if="addCashPledgeShow===1 && candepositConfig && !showCandepositConfig && close=='close'"></cash-pledge>
+        <add-cash-pledge
+          @goBack="goBack"
+          v-if="addCashPledgeShow===2 && candepositConfig && !showCandepositConfig && close=='close'"
+          :cashPledgedetail="cashPledgedetail"
+        ></add-cash-pledge>
+
+
       <el-tab-pane label="开通合伙人配置" name="partnerConfig">
         <partner-config></partner-config>
       </el-tab-pane>
@@ -49,6 +59,8 @@ export default {
   },
   data() {
     return {
+      close:'',
+      showCandepositConfig:true,
       activeName: 'customerServiceTelephone',
       systemFeeActive: 'provincial',
       addCashPledgeShow: 1,
@@ -60,6 +72,10 @@ export default {
     this.getPhoneFn();
   },
   methods: {
+    showCandepositConfigFn(data){
+     this.showCandepositConfig=data.show;
+       this.close=data.close;
+    },
     addCashPledge(row) {
       this.cashPledgedetail = row
       this.addCashPledgeShow = 2
