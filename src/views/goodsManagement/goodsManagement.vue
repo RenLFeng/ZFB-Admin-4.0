@@ -34,7 +34,8 @@
       ></el-table-column>
       <el-table-column label="操作" width="200" align="center">
         <template slot-scope="scope">
-          <el-button type="text" v-if="canEditGoods" @click="editProductBtn(scope.row)">编辑</el-button>
+          <el-button type="text" v-if="canEditGoods && scope.row.packageStatus!=-1" @click="editProductBtn(scope.row)">编辑</el-button>
+            <el-button disabled v-if="canEditGoods && scope.row.packageStatus==-1" @click="editProductBtn(scope.row)">已失效</el-button>
           <el-button
             type="text"
             v-if="scope.row.packageStatus === 0 && canPutAway"

@@ -29,7 +29,14 @@
                   @change="linkActivity"
                   @clear="clearActivity"
                 >
-                  <el-option :label="activeList.activityName" :value="activeList.activityId"></el-option>
+                  <!-- <el-option :label="activeList.activityName" :value="activeList.activityId"></el-option> -->
+                   <el-option
+                      v-for="item in activeList"
+                      :key="item.activityId"
+                      :value="item"
+                      :label="item.activityName"
+                      >
+                  </el-option>
                 </el-select>
               </el-form-item>
               <!-- <el-form-item label="关联活动" v-show="!isChange&&product.activityName">
@@ -152,7 +159,7 @@ export default {
     return {
       title: '',
       isLinkActivity: false,
-      activeList: {},
+      activeList: [],
       isChange: true,
       btnStatus: false,
       btnValid: false,
@@ -191,13 +198,16 @@ export default {
     }
   },
   methods: {
-    linkActivity() {
-      if (this.currentProduct.activityName) {
+    linkActivity(item) {
+      if (item.activityName) {
         this.isLinkActivity = true
-        this.currentProduct.brandId = this.activeList.brandId
-        this.currentProduct.price = this.activeList.price
-        this.currentProduct.deviceNum = this.activeList.number
-        this.currentProduct.packagePrice = this.activeList.activityAmt
+        this.currentProduct.activityName=item.activityName
+        this.currentProduct.brandId = item.brandId
+        this.currentProduct.price = item.price
+        this.currentProduct.deviceNum = item.number
+        this.currentProduct.packagePrice =item.activityAmt
+        this.currentProduct.activityId =item.activityId
+       
       } else {
         this.isLinkActivity = false
       }
@@ -298,8 +308,8 @@ export default {
     // 添加商品
     async releaseBtn() {
       if (!this.currentProduct.activityName) {
-        this.activeList.activityId = ''
-        this.activeList.activityName = ''
+        this.currentProduct.activityId = ''
+        this.currentProduct.activityName = ''
       }
       this.btnStatus = true
       const params = {
@@ -310,8 +320,8 @@ export default {
         deviceNum: this.currentProduct.deviceNum,
         orderNo: this.currentProduct.orderNo,
         packageStatus: this.currentProduct.packageStatus,
-        activityId: this.activeList.activityId,
-        activityName: this.activeList.activityName
+        activityId: this.currentProduct.activityId,
+        activityName: this.currentProduct.activityName
       }
       try {
         const res = await postWithFile({
@@ -336,8 +346,8 @@ export default {
     // 修改商品
     async modify() {
       if (!this.currentProduct.activityName) {
-        this.activeList.activityId = ''
-        this.activeList.activityName = ''
+        this.currentProduct.activityId = ''
+        this.currentProduct.activityName = ''
       }
       this.btnStatus = true
       const params = {
@@ -349,8 +359,8 @@ export default {
         deviceNum: this.currentProduct.deviceNum,
         orderNo: this.currentProduct.orderNo,
         packageStatus: this.currentProduct.packageStatus,
-        activityId: this.activeList.activityId,
-        activityName: this.activeList.activityName
+        activityId: this.currentProduct.activityId,
+        activityName: this.currentProduct.activityName
       }
       try {
         const res = await postWithFile({

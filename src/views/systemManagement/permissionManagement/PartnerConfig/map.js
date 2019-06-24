@@ -44,7 +44,7 @@ export const tableHead = () => [
     id: 8,
     label: '失效时间',
     value: 'disabledActivityDate'
-  }
+  },
 ]
 export const tableHeadArray = [
   '活动名称',
@@ -62,7 +62,9 @@ export const parseTable = arr => {
     ...v,
     openActivityDate: formateTime(v.openActivityDate),
     disabledActivityDate: formateTime(v.disabledActivityDate),
-    status: formateStatus[v.enable]
+    status: formateStatus[v.enable],
+    // operate:'启动'
+
   }))
 }
 export const formateStatus = {

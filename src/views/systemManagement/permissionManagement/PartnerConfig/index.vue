@@ -5,11 +5,14 @@
     </div>
     <section class="wrap">
       <el-row>
-        <el-col :span="24">
+        <!-- <el-col :span="22">
           <h1 v-if="getDetail.activityName">当前在线的活动是:{{getDetail.activityName}}</h1>
           <h1 v-else>当前在线的活动是:无</h1>
         </el-col>
-        <el-col :span="24">
+          <el-col :span="2" style="float:right">
+            <el-button type="primary" plain @click="newActivity">新建活动</el-button>
+          </el-col> -->
+        <!-- <el-col :span="24">
           <el-col :span="22">
             <el-button
               v-if="getDetail.activityName"
@@ -24,7 +27,7 @@
           <el-col :span="2" style="float:right">
             <el-button type="primary" plain @click="newActivity">新建活动</el-button>
           </el-col>
-        </el-col>
+        </el-col> -->
       </el-row>
     </section>
     <section>
@@ -98,6 +101,13 @@
           </template>
         </el-table-column>
         <el-table-column v-for="v in tableHead" :prop="v.value" :label="v.label" :key="v.id"></el-table-column>
+        <el-table-column label="操作">
+          <template slot-scope="scope">
+            <el-button size="mini" type="primary" v-if="scope.row.enable=='0'" @click="details(scope.row)">启用</el-button>
+            <el-button type="danger" size="mini" v-if="scope.row.enable=='1'" @click="disableState(scope.row)">禁用</el-button>
+             <!-- <el-button size="mini">详情</el-button> -->
+          </template>
+        </el-table-column>
       </el-table>
     </section>
     <new-activity
@@ -209,6 +219,24 @@ export default {
     }
   },
   methods: {
+    //启用
+    details(item){
+      // console.log(item);
+    this.$confirm('你确定要启用开通合伙人套餐'+item.activityName+'的配置吗？')
+          .then( ()=> {
+
+            this.open2(item)
+          })
+          .catch(_ => {});
+    },
+    //禁用
+    disableState(item){
+       this.$confirm('你确定要禁用开通合伙人套餐'+item.activityName+'的配置吗？')
+          .then(_ => {
+            this.open2(item)
+          })
+          .catch(_ => {});
+    },
     openBtn() {
       this.isOpen = true
       if (this.openActivityId) {
@@ -261,6 +289,7 @@ export default {
           .catch(() => {})
       }
     },
+
     async open() {
       try {
         const res = await post({
@@ -268,6 +297,24 @@ export default {
           data: {
             enable: 1,
             activityId: this.openActivityId
+          }
+        })
+        this.$message({
+          type: 'success',
+          message: res.msg
+        })
+        this.getAllActivity()
+      } catch (err) {
+        console.log(err)
+      }
+    },
+    async open2(item) {
+      try {
+        const res = await post({
+          url: 'activity/updActivityStatus',
+          data: {
+            enable: item.enable,
+            activityId:item.activityId
           }
         })
         this.$message({
@@ -405,11 +452,13 @@ export default {
         }
       }
     },
+    //新建活动
     newActivity() {
       this.type = 'add'
       this.activedObj = {}
       this.activityShow = true
     },
+    //查看当前活动详情
     currentActivity() {
       this.activityShow = true
       this.activedObj = this.getDetail
