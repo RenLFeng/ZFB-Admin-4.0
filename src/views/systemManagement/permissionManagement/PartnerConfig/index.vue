@@ -8,10 +8,10 @@
         <!-- <el-col :span="22">
           <h1 v-if="getDetail.activityName">当前在线的活动是:{{getDetail.activityName}}</h1>
           <h1 v-else>当前在线的活动是:无</h1>
-        </el-col>
+        </el-col> -->
           <el-col :span="2" style="float:right">
             <el-button type="primary" plain @click="newActivity">新建活动</el-button>
-          </el-col> -->
+          </el-col>
         <!-- <el-col :span="24">
           <el-col :span="22">
             <el-button
