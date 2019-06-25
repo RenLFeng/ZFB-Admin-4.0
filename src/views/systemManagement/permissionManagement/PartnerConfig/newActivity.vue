@@ -270,6 +270,7 @@ export default {
           url: 'activity/add',
           data
         })
+    
         this.isSend = false
         console.log('data: ', data)
         this.$emit('fresh')
@@ -278,7 +279,9 @@ export default {
           message: res.msg
         })
       } catch (err) {
+        this.isSend = false
         console.log(err)
+        
       }
     },
     // 编辑活动
@@ -324,6 +327,7 @@ export default {
         })
         this.$emit('fresh')
       } catch (err) {
+         this.isSend = false
         console.log(err)
       }
     },

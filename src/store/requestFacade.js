@@ -57,7 +57,7 @@ const handlers = [
         goLogin()
       }
       if (code === CODE.FAIL) {
-        gb.tips(msg)
+        gb.tips(msg);
       }
       if (code === CODE.SYS_ERROR) {
         gb.tips(msg)
