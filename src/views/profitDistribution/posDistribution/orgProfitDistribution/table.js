@@ -63,12 +63,12 @@ export const TableTitle = [
     prop: 'afterProfit',
     level: [PLATFORM, PROVINCIAL, ORGAN, SECONDORGAN]
   },
-  {
-    title: '活动扣除分润(元)',
-    prop: 'depositProfit',
-    level: [PLATFORM, PROVINCIAL, ORGAN, SECONDORGAN],
-    type: 'REPAY'
-  },
+  // {
+  //   title: '活动扣除分润(元)',
+  //   prop: 'depositProfit',
+  //   level: [PLATFORM, PROVINCIAL, ORGAN, SECONDORGAN],
+  //   type: 'REPAY'
+  // },
   {
     title: '结算状态',
     prop: 'settlement',

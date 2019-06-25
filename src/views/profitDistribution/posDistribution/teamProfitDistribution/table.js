@@ -121,12 +121,12 @@ export const DayTableTitle = [
     prop: 'profitAmt',
     level: [PLATFORM, PROVINCIAL, ORGAN, SECONDORGAN]
   },
-  {
-    title: '活动扣除分润(元)',
-    prop: 'depositProfit',
-    level: [PLATFORM, PROVINCIAL, ORGAN, SECONDORGAN],
-    type: 'REPAY'
-  },
+  // {
+  //   title: '活动扣除分润(元)',
+  //   prop: 'depositProfit',
+  //   level: [PLATFORM, PROVINCIAL, ORGAN, SECONDORGAN],
+  //   type: 'REPAY'
+  // },
   {
     title: '状态',
     prop: 'status',
