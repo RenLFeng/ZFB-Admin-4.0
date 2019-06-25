@@ -33,7 +33,7 @@
     </div>
     <span slot="footer" class="dialog-footer">
       <el-button @click="requestWithdrawClose">取 消</el-button>
-      <el-button type="primary" @click="submitWithdraw">提交申请</el-button>
+      <el-button type="primary" :loading="isSubmit" @click="submitWithdraw">提交申请</el-button>
     </span>
   </el-dialog>
 </template>
@@ -54,6 +54,7 @@ export default {
   },
   data() {
     return {
+      isSubmit:false,
       noteShow: false,
       noteText: '',
       requestWithdrawShow: false,
@@ -98,6 +99,8 @@ export default {
         this.noteShow = true
         this.noteText = '请输入提现金额'
       } else if (!this.noteShow) {
+        if(this.isSubmit) return;
+         this.isSubmit=true;
         try {
           post({
             url: 'withdraw/backapply',
@@ -109,10 +112,12 @@ export default {
               message: res.msg,
               type: 'success'
             })
-            this.$emit('requestWithdrawClose')
+            this.isSubmit=false;
+            this.$emit('requestWithdrawClose');
           })
         } catch (error) {
-          console.log(error)
+          console.log(error);
+          this.isSubmit=false;
         }
       }
     }
