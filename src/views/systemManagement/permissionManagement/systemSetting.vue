@@ -6,7 +6,7 @@
         <el-breadcrumb-item>系统设置</el-breadcrumb-item>
       </el-breadcrumb>
     </div>
-    <el-tabs v-model="activeName" style="margin-left:15px">
+    <el-tabs v-model="activeName" style="margin-left:15px" @tab-click="handleClick">
       <el-tab-pane label="客服电话" name="customerServiceTelephone">
         <div class="ServiceTel">
           客服电话:
@@ -76,6 +76,11 @@ export default {
     this.getPhoneFn();
   },
   methods: {
+     handleClick() {
+       if(this.close){
+         this.close=false;
+       }
+      },
     showCandepositConfigFn(data){
      this.showCandepositConfig=data.show;
        this.close=data.close;

@@ -157,6 +157,7 @@ export default {
         })
         this.cashPledgeData = ParseRoleList(res.data.rows);
         this.enableRuleName = res.data.enableRuleName
+          // this.enableRuleName = 1
         this.enableRuleNameId = res.data.enableRuleNameId
         this.$emit('closeActivity',{show:this.enableRuleName,close:''})
       } catch (error) {}
