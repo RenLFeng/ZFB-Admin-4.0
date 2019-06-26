@@ -18,7 +18,6 @@ import organizationWithdrawals from './organizationWithdrawals.vue'
 import userWithdrawals from './userWithdrawals.vue'
 import withdrawalDetail from './withdrawalDetail'
 import { post } from '../../../store/requestFacade.js'
-
 const typeMap = {
   ORGAN: 1,
   USERS: 2

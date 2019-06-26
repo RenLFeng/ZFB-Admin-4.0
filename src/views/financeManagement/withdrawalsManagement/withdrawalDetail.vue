@@ -393,7 +393,7 @@ export default {
         case 2:
           return '分公司代理'
         case 3:
-          return '一级代理'
+          return '子公司代理'
         case 4:
           return '机构直推合伙人'
         case 5:
@@ -545,7 +545,8 @@ export default {
       const organTypeMap = {
         1: '平台',
         2: '分公司',
-        3: '子公司'
+        3: '子公司',
+        9:'高级合伙人'
       }
       return organTypeMap[type]
     }

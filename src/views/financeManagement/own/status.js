@@ -9,11 +9,12 @@ export const exportRecordStatus = {
 export const organLevel = {
   1: '总公司',
   2: '分公司代理',
-  3: '一级代理',
+  3: '子公司代理',
   4: '机构直推合伙人',
   5: '合伙人',
   6: '机构直推普通用户',
-  7: '普通用户'
+  7: '普通用户',
+  9:'高级合伙人'
 }
 export const auditStatus = {
   0: '待审核',

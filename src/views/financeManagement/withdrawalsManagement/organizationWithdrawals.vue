@@ -161,7 +161,9 @@ export default {
       }
     },
     handleRows(rows) {
+      // console.log('rowsrowsrowsrows',rows);
       this.organWithdrawalData = parseOrganWithdrawl([].concat(rows))
+          // console.log('organWithdrawalDataorganWithdrawalData',this.organWithdrawalData);
       const obj = this.getExtra('obj')
       this.balanceSum = obj.balanceSum
       this.cashTotalAmt = obj.cashTotalAmt
