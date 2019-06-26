@@ -235,6 +235,7 @@ export const parseExportRecord = arr => {
   }))
 }
 export const parseOrganWithdrawl = arr => {
+  console.log('arrarrarrarrarr',arr);
   if (arr.length === 0) {
     return
   }

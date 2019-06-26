@@ -8,8 +8,8 @@ export const exportRecordStatus = {
 }
 export const organLevel = {
   1: '总公司',
-  2: '分公司代理',
-  3: '子公司代理',
+  2: '分公司',
+  3: '子公司',
   4: '机构直推合伙人',
   5: '合伙人',
   6: '机构直推普通用户',

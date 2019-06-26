@@ -391,9 +391,9 @@ export default {
         case 1:
           return '总公司'
         case 2:
-          return '分公司代理'
+          return '分公司'
         case 3:
-          return '子公司代理'
+          return '子公司'
         case 4:
           return '机构直推合伙人'
         case 5:
