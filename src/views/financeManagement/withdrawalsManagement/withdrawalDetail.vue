@@ -244,12 +244,12 @@
             <el-form-item label="设备收款费率">
               <span>万{{accountinfo.posRepayFee}}</span>
             </el-form-item>
-            <el-form-item label="快捷还款费率">
+            <!-- <el-form-item label="快捷还款费率">
               <span>万{{accountinfo.quickPayFee}}</span>
             </el-form-item>
             <el-form-item label="快捷收款费率">
               <span>万{{accountinfo.quickRepayFee}}</span>
-            </el-form-item>
+            </el-form-item> -->
           </el-col>
           <el-col :span="3" v-if="accountinfo.isOpen === 1">
             <el-tag>开通合伙人奖励分配规则</el-tag>
