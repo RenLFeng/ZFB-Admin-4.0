@@ -13,6 +13,7 @@ const CODE = {
   SYS_ERROR: '404'
 }
 
+
 let gb = {}
 
 export const init = ({ navigator, tips }) => {
