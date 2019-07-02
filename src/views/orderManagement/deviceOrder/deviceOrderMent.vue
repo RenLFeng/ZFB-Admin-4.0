@@ -64,6 +64,13 @@
             :picker-options="pickerOptions"
           ></el-date-picker>
         </el-form-item>
+        <!-- <el-form-item label="发货类型">
+          <el-select clearable v-model="searchData.type" placeholder="选择发货类型">
+            <el-option label="全部" value="1"></el-option>
+            <el-option label="机构直营" value="2"></el-option>
+            <el-option label="机构代发" value="3"></el-option>
+          </el-select>
+        </el-form-item> -->
       </el-form>
       <div style="margin-bottom: 10px">
         <el-button size="small" type="primary" @click="search">搜索</el-button>
@@ -145,7 +152,8 @@ export default {
         userName: '',
         brandId: '',
         startDate: '',
-        endDate: ''
+        endDate: '',
+        type:'1'
       },
       devModelData: [],
       showShipments: false,

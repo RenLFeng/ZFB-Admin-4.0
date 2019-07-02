@@ -223,3 +223,8 @@ export default {
   }
 }
 </script>
+<style>
+.el-table::before{
+  display: none;
+}
+</style>

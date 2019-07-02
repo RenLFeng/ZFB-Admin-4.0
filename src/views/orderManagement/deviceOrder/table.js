@@ -54,6 +54,11 @@ export const TableTitle = [
     prop: 'consigner',
     level: [PLATFORM, PROVINCIAL, ORGAN, SECONDORGAN]
   },
+  // {
+  //   title: '发货类型',
+  //   prop: 'type',
+  //   level: [PLATFORM, PROVINCIAL, ORGAN, SECONDORGAN]
+  // },
   {
     title: '下单时间',
     prop: 'addDate',

@@ -15,6 +15,7 @@
               <div class="information">
                 <h4>订单信息</h4>
                 <p>订单编号 <span>{{orderinfo.orderNo}}</span></p>
+                <!-- <p>发货类型 <span>{{orderinfo.type}}</span></p> -->
                 <p>订单来源 <span>{{orderinfo.receiveName}}</span></p>
                 <p>付款方式 <span>{{orderinfo.payType}}</span></p>
                 <p>支付单号 <span>{{orderinfo.payOrderNo}}</span></p>

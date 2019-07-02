@@ -107,7 +107,6 @@ export default {
       e.currentTarget.nextElementSibling.click()
     },
     getlogo(e) {
-      console.log(e);
       const [logoPic] = e.currentTarget.files
       this.logoPic = logoPic
     },
