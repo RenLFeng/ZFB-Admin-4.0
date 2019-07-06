@@ -19,6 +19,7 @@
 </template>
 
 <script>
+import { post } from '../../../../store/requestFacade.js'
 export default {
   name: 'stop-description',
   props: {
@@ -44,36 +45,57 @@ export default {
     cutCardNo(num) {
       if (!num) return ''
       return num.slice(length - 4, num.length)
-    }
+    },
+    async getPhoneFn() {
+      const api = 'routineConfig/getPhone'
+      try {
+        const res = await post({
+          url: api,
+          data: {
+       
+          }
+        })
+        if (res.msg === '成功') {
+            if(res.data.substr(0,1)=='0' && res.data.length=='12' && (res.data.indexOf('-')=='-1')){
+              this.phone=res.data.substr(0,4)+'-'+res.data.substr(4,res.data.length);
+            }else{
+                this.phone=res.data;
+            }
+        }
+      } catch (error) {
+        console.log(error)
+      }
+    },
   },
   data() {
     return {
+      phone:'',
       currentReasonIndex: undefined,
       initSmsContent: [
         {
           index: 1,
           desc: '交易受限',
-          message: cardNo => `尊敬的用户：您的卡(${cardNo})交易权限受限，导致消费失败（计划已暂停，详情请咨询您的发卡行），取消限制后，请联系三众客服恢复计划。电话：400-843-3388`
+          message: cardNo => `尊敬的用户：您的卡(${cardNo})交易权限受限，导致消费失败（计划已暂停，详情请咨询您的发卡行），取消限制后，请联系三众客服恢复计划。电话：${this.phone}`
         },
         {
           index: 2,
           desc: '信息失效',
-          message: cardNo => `尊敬的用户：您的卡(${cardNo})信息已失效。导致消费失败（计划已被取消，请先解绑卡片，再重新绑卡制定计划）如有疑问请联系三众客服，电话：400-843-3388\n信息已失效包括：卡片超过有效期、持卡人身份证超过有效期、持卡人身份信息有误、预留手机号码、CVN2信息有误`
+          message: cardNo => `尊敬的用户：您的卡(${cardNo})信息已失效。导致消费失败（计划已被取消，请先解绑卡片，再重新绑卡制定计划）如有疑问请联系三众客服，电话：${this.phone}\n信息已失效包括：卡片超过有效期、持卡人身份证超过有效期、持卡人身份信息有误、预留手机号码、CVN2信息有误`
         },
         {
           index: 3,
           desc: '金额限制',
-          message: cardNo => `尊敬的用户：您的卡(${cardNo})单笔消费金额超过2000元限额，导致消费失败（计划已被取消，请降低账单金额，再重新制定计划）。如有疑问请联系三众客服，电话：400-843-3388\n注：限额包括（银行，通道的限额）`
+          message: cardNo => `尊敬的用户：您的卡(${cardNo})单笔消费金额超过2000元限额，导致消费失败（计划已被取消，请降低账单金额，再重新制定计划）。如有疑问请联系三众客服，电话：${this.phone}\n注：限额包括（银行，通道的限额）`
         },
         {
           index: 4,
           desc: '余额不足',
-          message: cardNo => `尊敬的用户：您的卡(${cardNo})余额不足，导致消费失败（计划已暂停，请确保卡内可用额度足够），如有疑问请联系三众客服，电话：400-843-3388`
+          message: cardNo => `尊敬的用户：您的卡(${cardNo})余额不足，导致消费失败（计划已暂停，请确保卡内可用额度足够），如有疑问请联系三众客服，电话：${this.phone}`
         },
         {
           index: 5,
           desc: '设备出错',
-          message: cardNo => `尊敬的用户：您的卡(${cardNo})因网络原因导致消费失败（计划已暂停，请确保设备网络畅通稳定），如有疑问请联系三众客服，电话：400-843-3388\n原因包括：未插卡（计划已暂停，请确保卡已插好）、设备通讯出错（计划已暂停，请确保设备电量充足）`
+          message: cardNo => `尊敬的用户：您的卡(${cardNo})因网络原因导致消费失败（计划已暂停，请确保设备网络畅通稳定），如有疑问请联系三众客服，电话：${this.phone}\n原因包括：未插卡（计划已暂停，请确保卡已插好）、设备通讯出错（计划已暂停，请确保设备电量充足）`
         }
       ],
       smsContent: ''
@@ -91,7 +113,8 @@ export default {
     }
   },
   mounted() {
-    console.log(this.cardNo)
+    console.log(this.cardNo);
+    this.getPhoneFn();
   }
 }
 </script>

@@ -7,7 +7,7 @@
       <div>
         <el-button v-if="showSavePlan" type="primary" @click="applyPlanAdjust">保存计划</el-button>
         <el-button v-if="showRecoverPlan" type="success" @click="recoverPlan">恢复计划</el-button>
-        <el-button v-if="showStopPlan" type="warning" @click="stopPlan">暂停计划</el-button>
+         <el-button v-if="showStopPlan" type="warning" @click="stopPlan">暂停计划</el-button>
         <el-button v-if="showEndPlan" type="danger" @click="endPlan">结束计划</el-button>
         <el-button type="info" @click="processingShow = true">处理记录</el-button>
       </div>
@@ -611,6 +611,7 @@ export default {
             smsContent: smsContent
           }
         })
+        console.log('fsfsfs',res);
         this.$message({ message: res.msg, type: 'success' })
         await this.start()
       } catch (err) {
