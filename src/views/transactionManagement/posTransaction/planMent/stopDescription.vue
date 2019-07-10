@@ -101,6 +101,7 @@ export default {
       smsContent: ''
     }
   },
+  
   watch: {
     currentReasonIndex() {
       console.log('reason index change', this.currentReasonIndex)
