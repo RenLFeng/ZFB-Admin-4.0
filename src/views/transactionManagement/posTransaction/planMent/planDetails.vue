@@ -286,7 +286,7 @@ export default {
     detailsData: {
       type: Object,
       default: () => {}
-    }
+    },
   },
   data() {
     return {
@@ -309,7 +309,8 @@ export default {
         amount: undefined,
         order: undefined,
         taskId: undefined
-      }
+      },
+      index:1
     }
   },
   methods: {
@@ -369,7 +370,14 @@ export default {
     },
     // 点击返回
     toback() {
-      this.$emit('toback', this.showPlan)
+      let index=this.index++;
+      this.$emit('toback', {'state':true,'showPlan':this.showPlan})
+        this.$router.push({
+                    name: '',
+                    query: {
+                        count:this.$route.query.count++ || index,
+                    }
+                })
     },
     getplanLog(row) {
       this.tradeNo = row.tradeNo

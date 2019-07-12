@@ -145,6 +145,8 @@ export default {
   mixins: [mixins.pageMixin],
   data() {
     return {
+      index:1,
+      stateed:this.state,
       level: '',
       levelMap: levelMap,
       TableList: TableList,
@@ -169,7 +171,8 @@ export default {
       planData: {
         showPlan: 2,
         detailsData: {}
-      }
+      },
+      load:false
     }
   },
   methods: {
@@ -236,8 +239,17 @@ export default {
       } catch (err) {
         console.log(err)
       }
-    }
+    },
   },
+  watch:{
+          "$route":{
+              handler(route){
+                console.log('thatthatthat',this.$route.query);
+                this.loadData();
+                this.$route.query.count=this.$route.query.count++;
+              }
+          }  
+        },
   mounted() {
     this.loadData()
     this.getbank()

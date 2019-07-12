@@ -5,6 +5,7 @@
   </div>
 </template>
 
+
 <script>
 import planTable from './planMent/planTable'
 import planDetails from './planMent/planDetails'
@@ -17,7 +18,7 @@ export default {
   data() {
     return {
       showPlan: 1,
-      detailsData: ''
+      detailsData: '',
     }
   },
   methods: {
@@ -26,12 +27,12 @@ export default {
       this.showPlan = details.showPlan
       this.detailsData = details.detailsData
     },
-    // 点击返回
     toback(data) {
-      this.showPlan = data
-    }
-  }
-}
+      this.showPlan = data.showPlan;
+    },
+
+  },
+} 
 </script>
 
 <style lang="css" scoped>
