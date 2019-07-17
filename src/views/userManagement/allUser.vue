@@ -64,7 +64,7 @@
             <el-button
               type="danger"
               v-if="canUserEnable"
-              v-show="scope.row.organId=== 6|| scope.row.organLevel=== 7"
+              v-show="scope.row.organLevel=== 6|| scope.row.organLevel=== 7"
               size="mini"
               @click="upgrade(scope.row)"
             >升级</el-button>
