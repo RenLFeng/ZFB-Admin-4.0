@@ -26,7 +26,7 @@
          <el-input v-model="ModelData.brandLength" v-if="statusData.status === 2" :disabled="true"></el-input>
       </el-form-item>
       <div style="background-color: #efefef;padding-top:15px">
-        <el-form-item label="合伙人奖励" prop='cardReward'>
+        <el-form-item label="激活奖励" prop='cardReward'>
             <el-input type='Number' min='0' v-model="ModelData.cardReward" style="width:480px"></el-input>
         </el-form-item>
         <el-form-item>元</el-form-item>

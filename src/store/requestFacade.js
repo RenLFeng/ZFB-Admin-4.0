@@ -3,7 +3,7 @@ import storageKeys from './storageKeys'
 
 let baseURL='http://test-admin.sanzhongzhixiang.com';
 
-//  baseURL='http://192.168.0.24:8080';
+//  baseURL='http://192.168.0.23:8080';
 
 const CODE = {
   SUCCESS: '200',

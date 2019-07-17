@@ -61,6 +61,13 @@
               size="mini"
               @click="activation(scope.row)"
             >激活</el-button>
+            <el-button
+              type="danger"
+              v-if="canUserEnable"
+              v-show="scope.row.organId=== 6|| scope.row.organLevel=== 7"
+              size="mini"
+              @click="upgrade(scope.row)"
+            >升级</el-button>
           </template>
         </el-table-column>
       </el-table>
@@ -212,7 +219,32 @@ export default {
       } catch (err) {
         console.log(err)
       }
-    }
+    },
+     // 点击升级
+    upgrade(row) {
+      this.$confirm('升级账号后可以正常登录APP,您确定升级该账号吗?', '账号升级', {
+        confirmButtonText: '确定',
+        cancelButtonText: '取消'
+      })
+        .then(() => {
+          this.toupgrade(row)
+        })
+        .catch(() => {})
+    },
+      async toupgrade(row) {
+      try {
+        const res = await post({
+          url: 'userManagement/upPartner',
+          data: {
+            organId: row.organId
+          }
+        })
+        this.$message({ message: res.msg, type: 'success' })
+        this.loadData()
+      } catch (err) {
+        console.log(err)
+      }
+    },
   },
   mounted() {
     this.level = localStorage.getItem('level')
@@ -234,4 +266,10 @@ export default {
 </script>
 
 <style lang="css" scoped>
+.el-button--mini, .el-button--mini.is-round {
+    margin-top: 5px;
+}
+.el-table::before{
+  display: none;
+}
 </style>

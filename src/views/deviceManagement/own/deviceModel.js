@@ -34,7 +34,7 @@ export const devModelColumn = () => {
     },
     {
       tableProp: 'cardReward',
-      tableLabel: '合伙人奖励(元)'
+      tableLabel: '激活奖励(元)'
     },
     {
       tableProp: 'activateReward',
