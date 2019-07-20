@@ -1,10 +1,13 @@
 <template>
-  <div id="app">
-    <router-view/>
-  </div>
+ <a-locale-provider :locale="locale">
+    <div id="app">
+        <router-view/>
+    </div>
+  </a-locale-provider>
 </template>
 
 <script>
+
 import storageKeys from './store/storageKeys.js'
 import actionKeys from './store/actionKeys.js'
 import { createNavigator } from './navigator.js'
@@ -13,12 +16,20 @@ import stateKeys from './store/stateKeys.js'
 import { mapState, mapActions } from 'vuex'
 import { init } from '../src/store/requestFacade'
 
+
+
+import zhCN from 'ant-design-vue/lib/locale-provider/zh_CN';
+import moment from 'moment';
+import 'moment/locale/zh-cn';
+moment.locale('zh-cn');
+
 function tap(x) {
   return x
 }
 export default {
   data() {
     return {
+      locale: zhCN,
       currentVersion: '8.0',
       newVersion: '8.0'
     }

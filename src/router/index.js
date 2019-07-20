@@ -21,6 +21,13 @@ export function createRouter() {
           oneStage,
           {
             meta: {
+              title: '蚂蚁金服System'
+            },
+            path: '/AntDesign',
+            component: () => import('../views/AntDesign.vue')
+          },
+          {
+            meta: {
               title: '修改密码'
             },
             path: '/editPassword',
