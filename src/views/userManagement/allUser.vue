@@ -266,8 +266,9 @@ export default {
 </script>
 
 <style lang="css" scoped>
-.el-button--mini, .el-button--mini.is-round {
-    margin-top: 5px;
+.el-button--mini{
+    padding: 0.5rem 0.25rem;
+    margin: 0.5rem 0.2rem;
 }
 .el-table::before{
   display: none;
