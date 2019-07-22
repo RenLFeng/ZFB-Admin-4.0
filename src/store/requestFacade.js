@@ -68,6 +68,28 @@ const handlers = [
   }
 ]
 
+export const get = ({ url, data }) =>
+  new Promise((resolve, reject) => {
+    data = data || {}
+    let prefix = process.env.VUE_APP_HOST || baseURL
+    // let prefix = baseURL
+    url = [prefix, url].join('/')
+    let client = new XMLHttpRequest()
+    client.open('GET', url, true)
+    const token = localStorage.getItem(storageKeys.TOKEN)
+    if (token) {
+      client.setRequestHeader('token', token)
+    }
+    client.send()
+    client.onreadystatechange = () => {
+      if (client.readyState === 4) {
+        const handler = handlers.find(handler => handler.code === client.status)
+        if (handler) {
+          handler.handle(client.responseText, resolve, reject)
+        }
+      }
+    }
+  })
 export const post = ({ url, data }) =>
   new Promise((resolve, reject) => {
     data = data || {}

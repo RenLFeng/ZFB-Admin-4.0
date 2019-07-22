@@ -13,15 +13,15 @@ import * as GobalFilters from './public/filters/index'
 import 'ant-design-vue/dist/antd.css'
 import { from } from '_array-flatten@2.1.2@array-flatten';
 
-import {post,postJOSN,postWithFile} from './store/requestFacade';
+import {get,post,postJOSN,postWithFile} from './store/requestFacade';
 import Api from './store/Api';
+Vue.prototype.Api = Api; 
+Vue.prototype.get = get; 
 Vue.prototype.post = post; 
 Vue.prototype.postJOSN = postJOSN; 
 Vue.prototype.postWithFile = postWithFile; 
-Vue.prototype.Api = Api; 
 Vue.config.productionTip = false;
 Object.keys(GobalFilters).forEach(key => Vue.filter(key, GobalFilters[key]))
-
 axios.interceptors.request.use(
   config => {
     const userToken = localStorage.getItem('token')

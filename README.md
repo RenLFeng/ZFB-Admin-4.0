@@ -67,8 +67,9 @@ yarn run test:unit
 │   ├── Menu.js
 │   ├── Tag.js
 │   ├── actionKeys.js
-│   ├── requestFacade.js
-│   ├── index.js
+|   ├── Api.js #URL接口统一管理 
+│   ├── requestFacade.js #数据请求方法（get ,post, postWithFile ,postJOSN）  
+│   ├── index.js #vuex状态管理
 │   ├── mutationKeys.js
 │   └── stateKeys.js
 └── views #页面，有子模块的模块，要写成文件夹
