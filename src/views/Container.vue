@@ -4,7 +4,7 @@
       <v-head></v-head>
     </header>
     <section class="MAIN">
-      <v-sidebar></v-sidebar>
+      <!-- <v-sidebar></v-sidebar> -->
       <div class="content-area" :class="{'content-collapse':showMenu}">
         <div class="flex-box">
           <v-tags></v-tags>

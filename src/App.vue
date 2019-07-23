@@ -11,7 +11,7 @@
 import storageKeys from './store/storageKeys.js'
 import actionKeys from './store/actionKeys.js'
 import { createNavigator } from './navigator.js'
-import { platform, provincialLevel, oneStage } from './router/pages.js'
+// import { platform, provincialLevel, oneStage } from './router/pages.js'
 import stateKeys from './store/stateKeys.js'
 import { mapState, mapActions } from 'vuex'
 import { init } from '../src/store/requestFacade'
@@ -39,17 +39,17 @@ export default {
   },
   methods: {
     ...mapActions([actionKeys.SET_MENUS]),
-    navToHome() {
-      const { route } = this[stateKeys.MENUS].find(
-        ({ route }) =>
-          [platform, provincialLevel, oneStage].findIndex(
-            ({ path }) => path.replace('/', '') === route
-          ) !== -1
-      )
-      createNavigator(this).goHome({
-        dest: route
-      })
-    }
+    // navToHome() {
+    //   const { route } = this[stateKeys.MENUS].find(
+    //     ({ route }) =>
+    //       [platform, provincialLevel, oneStage].findIndex(
+    //         ({ path }) => path.replace('/', '') === route
+    //       ) !== -1
+    //   )
+    //   createNavigator(this).goHome({
+    //     dest: route
+    //   })
+    // }
   },
   mounted() {
     init({
@@ -58,7 +58,7 @@ export default {
     })
     if (localStorage.getItem(tap(storageKeys.MENUS))) {
       this[actionKeys.SET_MENUS](JSON.parse(localStorage.getItem(storageKeys.MENUS)))
-      this.navToHome()
+      // this.navToHome()
     } else {
       createNavigator(this).goLogin()
     }

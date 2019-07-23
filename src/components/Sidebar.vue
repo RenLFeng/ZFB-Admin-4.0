@@ -8,7 +8,7 @@
       router
     >
       <div>
-           <section class="antd"> <router-link to="AntDesign">蚂蚁金服System </router-link></section>
+           <section class="antd"> <router-link to="AntDesign">蚂蚁金服</router-link></section>
         <section v-for="(L1, code) in menuList" :key="code">
           <el-menu-item :index="L1.route" v-if="L1.children.length==0">
             <i :class="L1.icon"></i>

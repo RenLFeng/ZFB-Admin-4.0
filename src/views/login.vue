@@ -54,7 +54,7 @@
 import actionKeys from '../store/actionKeys.js'
 import storageKeys from '../store/storageKeys.js'
 import { createNavigator } from '../navigator.js'
-import { platform, provincialLevel, oneStage } from '../router/pages.js'
+// import { platform, provincialLevel, oneStage } from '../router/pages.js'
 import { mapActions, mapState } from 'vuex'
 import { post } from '../store/requestFacade.js'
 import stateKeys from '../store/stateKeys.js'
@@ -78,17 +78,17 @@ export default {
   },
   methods: {
     ...mapActions([actionKeys.SET_MENUS, actionKeys.CLEAR_LOGIN]),
-    navToHome() {
-      const { route } = this[stateKeys.MENUS].find(
-        ({ route }) =>
-          [platform, provincialLevel, oneStage].findIndex(
-            ({ path }) => path.replace('/', '') === route
-          ) !== -1
-      )
-      createNavigator(this).goHome({
-        dest: route
-      })
-    },
+    // navToHome() {
+    //   const { route } = this[stateKeys.MENUS].find(
+    //     ({ route }) =>
+    //       [platform, provincialLevel, oneStage].findIndex(
+    //         ({ path }) => path.replace('/', '') === route
+    //       ) !== -1
+    //   )
+    //   createNavigator(this).goHome({
+    //     dest: route
+    //   })
+    // },
     async getVerificationCode() {
       this.login.uid = Math.floor(Math.random() * 10000)
       try {
@@ -128,7 +128,8 @@ export default {
             localStorage.setItem(storageKeys.LEVEL, res.data.level)
             localStorage.setItem('username', this.login.username)
             this[actionKeys.SET_MENUS](res.data.tree)
-            this.navToHome()
+            this.$router.push('/AntDesign')
+            // this.navToHome()
           } else {
             this.$message(res.data)
           }
